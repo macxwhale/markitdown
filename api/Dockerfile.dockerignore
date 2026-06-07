@@ -1,0 +1,7 @@
+# Per-Dockerfile override of the repo-root .dockerignore (which excludes
+# everything except packages/, so api/ would otherwise be missing from the
+# build context). BuildKit picks up "<dockerfile>.dockerignore" automatically
+# when present alongside the Dockerfile it overrides — see api/README.md.
+*
+!packages/
+!api/

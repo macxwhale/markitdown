@@ -1,0 +1,31 @@
+# Compose file for the MarkItDown HTTP API (api/).
+#
+# This file — like everything under api/ — is new code added on top of the
+# microsoft/markitdown upstream and is not present there, so syncing this fork
+# with upstream will never conflict with or remove it. See api/README.md.
+#
+#   API_KEY=mysecret docker compose up --build   # with auth
+#   docker compose up --build                    # dev mode, no auth
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    image: markitdown-api:local
+    ports:
+      - "${API_PORT:-8000}:8000"
+    environment:
+      API_KEY: "${API_KEY:-}"
+      OPENAI_API_KEY: "${OPENAI_API_KEY:-}"
+      OPENAI_BASE_URL: "${OPENAI_BASE_URL:-}"
+      OPENAI_MODEL: "${OPENAI_MODEL:-gpt-4o-mini}"
+      MAX_UPLOAD_BYTES: "${MAX_UPLOAD_BYTES:-52428800}"
+      CORS_ALLOW_ORIGINS: "${CORS_ALLOW_ORIGINS:-}"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s

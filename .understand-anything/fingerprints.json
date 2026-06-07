@@ -1,0 +1,5795 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "e144e0a2be95b34df17433bac904e635f2c5e551",
+  "generatedAt": "2026-06-07T16:04:17.556Z",
+  "files": {
+    ".gitattributes": {
+      "filePath": ".gitattributes",
+      "contentHash": "a5811fa850b40db2c3f0c07ac0855e90085b349e68f4d3fcbbd289383b4b43e9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 6,
+      "hasStructuralAnalysis": false
+    },
+    ".understand-anything/.understandignore": {
+      "filePath": ".understand-anything/.understandignore",
+      "contentHash": "f1a031a6c2feb72ff0470d9b823832d2b54a2a1e1aeb5c7d444e7761667b1a04",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 91,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown-mcp/src/markitdown_mcp/__about__.py": {
+      "filePath": "packages/markitdown-mcp/src/markitdown_mcp/__about__.py",
+      "contentHash": "441d22cf08a4eeb9a05b31ec7281fa4dfea3cf41bc0ab35b4b74e4f376de135a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 5,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown-mcp/src/markitdown_mcp/__init__.py": {
+      "filePath": "packages/markitdown-mcp/src/markitdown_mcp/__init__.py",
+      "contentHash": "d332de62c0ddcefcdadaa66d58766d72f8d06d3d9c84658fb2df3d8e480aa4ea",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": ".__about__",
+          "specifiers": [
+            "__version__"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 10,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown-mcp/src/markitdown_mcp/__main__.py": {
+      "filePath": "packages/markitdown-mcp/src/markitdown_mcp/__main__.py",
+      "contentHash": "27c5adacaf02e01755a8db36dc78e829c5d0557049b117fa559b4e6dc6c3029f",
+      "functions": [
+        {
+          "name": "convert_to_markdown",
+          "params": [
+            "uri"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "check_plugins_enabled",
+          "params": [],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "create_starlette_app",
+          "params": [
+            "mcp_server",
+            "debug"
+          ],
+          "returnType": "Starlette",
+          "exported": true,
+          "lineCount": 45
+        },
+        {
+          "name": "main",
+          "params": [],
+          "exported": true,
+          "lineCount": 55
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "contextlib",
+          "specifiers": [
+            "contextlib"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "collections.abc",
+          "specifiers": [
+            "AsyncIterator"
+          ]
+        },
+        {
+          "source": "mcp.server.fastmcp",
+          "specifiers": [
+            "FastMCP"
+          ]
+        },
+        {
+          "source": "starlette.applications",
+          "specifiers": [
+            "Starlette"
+          ]
+        },
+        {
+          "source": "mcp.server.sse",
+          "specifiers": [
+            "SseServerTransport"
+          ]
+        },
+        {
+          "source": "starlette.requests",
+          "specifiers": [
+            "Request"
+          ]
+        },
+        {
+          "source": "starlette.routing",
+          "specifiers": [
+            "Mount",
+            "Route"
+          ]
+        },
+        {
+          "source": "starlette.types",
+          "specifiers": [
+            "Receive",
+            "Scope",
+            "Send"
+          ]
+        },
+        {
+          "source": "mcp.server",
+          "specifiers": [
+            "Server"
+          ]
+        },
+        {
+          "source": "mcp.server.streamable_http_manager",
+          "specifiers": [
+            "StreamableHTTPSessionManager"
+          ]
+        },
+        {
+          "source": "markitdown",
+          "specifiers": [
+            "MarkItDown"
+          ]
+        },
+        {
+          "source": "uvicorn",
+          "specifiers": [
+            "uvicorn"
+          ]
+        }
+      ],
+      "exports": [
+        "convert_to_markdown",
+        "check_plugins_enabled",
+        "create_starlette_app",
+        "main"
+      ],
+      "totalLines": 141,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown-mcp/src/markitdown_mcp/py.typed": {
+      "filePath": "packages/markitdown-mcp/src/markitdown_mcp/py.typed",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown-mcp/tests/__init__.py": {
+      "filePath": "packages/markitdown-mcp/tests/__init__.py",
+      "contentHash": "de117af1ce60a0bb1f44cc76fb26f80b3ad4d938a187442f1cbb44de07badd16",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 4,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown-ocr/src/markitdown_ocr/__about__.py": {
+      "filePath": "packages/markitdown-ocr/src/markitdown_ocr/__about__.py",
+      "contentHash": "ec6e8c3fec96ba308337a579d2bcdbe9f264a5807d56fb6bc8e7a1371d2fbc60",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 5,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown-ocr/src/markitdown_ocr/__init__.py": {
+      "filePath": "packages/markitdown-ocr/src/markitdown_ocr/__init__.py",
+      "contentHash": "db490834c85f2d0bd0d87cd647cca8949624bd1ef5b551be330a04b990525e03",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "._plugin",
+          "specifiers": [
+            "__plugin_interface_version__",
+            "register_converters"
+          ]
+        },
+        {
+          "source": ".__about__",
+          "specifiers": [
+            "__version__"
+          ]
+        },
+        {
+          "source": "._ocr_service",
+          "specifiers": [
+            "OCRResult",
+            "LLMVisionOCRService"
+          ]
+        },
+        {
+          "source": "._pdf_converter_with_ocr",
+          "specifiers": [
+            "PdfConverterWithOCR"
+          ]
+        },
+        {
+          "source": "._docx_converter_with_ocr",
+          "specifiers": [
+            "DocxConverterWithOCR"
+          ]
+        },
+        {
+          "source": "._pptx_converter_with_ocr",
+          "specifiers": [
+            "PptxConverterWithOCR"
+          ]
+        },
+        {
+          "source": "._xlsx_converter_with_ocr",
+          "specifiers": [
+            "XlsxConverterWithOCR"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 32,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown-ocr/src/markitdown_ocr/_docx_converter_with_ocr.py": {
+      "filePath": "packages/markitdown-ocr/src/markitdown_ocr/_docx_converter_with_ocr.py",
+      "contentHash": "d10841a1a759a47fc36b5d9f4b00a9f1194e2032399f500c52860ac70c86e736",
+      "functions": [],
+      "classes": [
+        {
+          "name": "DocxConverterWithOCR",
+          "methods": [
+            "__init__",
+            "accepts",
+            "convert",
+            "_extract_and_ocr_images",
+            "_inject_placeholders"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 157
+        }
+      ],
+      "imports": [
+        {
+          "source": "io",
+          "specifiers": [
+            "io"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any",
+            "BinaryIO",
+            "Optional"
+          ]
+        },
+        {
+          "source": "markitdown.converters",
+          "specifiers": [
+            "HtmlConverter"
+          ]
+        },
+        {
+          "source": "markitdown.converter_utils.docx.pre_process",
+          "specifiers": [
+            "pre_process_docx"
+          ]
+        },
+        {
+          "source": "markitdown",
+          "specifiers": [
+            "DocumentConverterResult",
+            "StreamInfo"
+          ]
+        },
+        {
+          "source": "markitdown._exceptions",
+          "specifiers": [
+            "MissingDependencyException",
+            "MISSING_DEPENDENCY_MESSAGE"
+          ]
+        },
+        {
+          "source": "._ocr_service",
+          "specifiers": [
+            "LLMVisionOCRService"
+          ]
+        }
+      ],
+      "exports": [
+        "DocxConverterWithOCR"
+      ],
+      "totalLines": 190,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown-ocr/src/markitdown_ocr/_ocr_service.py": {
+      "filePath": "packages/markitdown-ocr/src/markitdown_ocr/_ocr_service.py",
+      "contentHash": "a33516af7ad5d0e2825e40738c79859212dbb9fce28c4af97f4a81ec2a9970aa",
+      "functions": [],
+      "classes": [
+        {
+          "name": "OCRResult",
+          "methods": [],
+          "properties": [
+            "text",
+            "confidence",
+            "backend_used",
+            "error"
+          ],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "LLMVisionOCRService",
+          "methods": [
+            "__init__",
+            "extract_text"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 88
+        }
+      ],
+      "imports": [
+        {
+          "source": "base64",
+          "specifiers": [
+            "base64"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any",
+            "BinaryIO"
+          ]
+        },
+        {
+          "source": "dataclasses",
+          "specifiers": [
+            "dataclass"
+          ]
+        },
+        {
+          "source": "markitdown",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        }
+      ],
+      "exports": [
+        "OCRResult",
+        "LLMVisionOCRService"
+      ],
+      "totalLines": 111,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown-ocr/src/markitdown_ocr/_pdf_converter_with_ocr.py": {
+      "filePath": "packages/markitdown-ocr/src/markitdown_ocr/_pdf_converter_with_ocr.py",
+      "contentHash": "d5426d932b8f49c499da40a69b8b75b3f66055136cc701832bb40b9d33221fd6",
+      "functions": [
+        {
+          "name": "_extract_images_from_page",
+          "params": [
+            "page"
+          ],
+          "returnType": "list[dict]",
+          "exported": true,
+          "lineCount": 99
+        }
+      ],
+      "classes": [
+        {
+          "name": "PdfConverterWithOCR",
+          "methods": [
+            "__init__",
+            "accepts",
+            "convert",
+            "_extract_page_images",
+            "_ocr_full_pages"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 294
+        }
+      ],
+      "imports": [
+        {
+          "source": "io",
+          "specifiers": [
+            "io"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any",
+            "BinaryIO",
+            "Optional"
+          ]
+        },
+        {
+          "source": "markitdown",
+          "specifiers": [
+            "DocumentConverter",
+            "DocumentConverterResult",
+            "StreamInfo"
+          ]
+        },
+        {
+          "source": "markitdown._exceptions",
+          "specifiers": [
+            "MissingDependencyException",
+            "MISSING_DEPENDENCY_MESSAGE"
+          ]
+        },
+        {
+          "source": "._ocr_service",
+          "specifiers": [
+            "LLMVisionOCRService"
+          ]
+        }
+      ],
+      "exports": [
+        "_extract_images_from_page",
+        "PdfConverterWithOCR"
+      ],
+      "totalLines": 423,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown-ocr/src/markitdown_ocr/_plugin.py": {
+      "filePath": "packages/markitdown-ocr/src/markitdown_ocr/_plugin.py",
+      "contentHash": "47f2ff94a47897170bc56753990f9b095ec304dfa889eb0d7d80d748c70f6ea3",
+      "functions": [
+        {
+          "name": "register_converters",
+          "params": [
+            "markitdown"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 50
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any"
+          ]
+        },
+        {
+          "source": "markitdown",
+          "specifiers": [
+            "MarkItDown"
+          ]
+        },
+        {
+          "source": "._ocr_service",
+          "specifiers": [
+            "LLMVisionOCRService"
+          ]
+        },
+        {
+          "source": "._pdf_converter_with_ocr",
+          "specifiers": [
+            "PdfConverterWithOCR"
+          ]
+        },
+        {
+          "source": "._docx_converter_with_ocr",
+          "specifiers": [
+            "DocxConverterWithOCR"
+          ]
+        },
+        {
+          "source": "._pptx_converter_with_ocr",
+          "specifiers": [
+            "PptxConverterWithOCR"
+          ]
+        },
+        {
+          "source": "._xlsx_converter_with_ocr",
+          "specifiers": [
+            "XlsxConverterWithOCR"
+          ]
+        }
+      ],
+      "exports": [
+        "register_converters"
+      ],
+      "totalLines": 69,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown-ocr/src/markitdown_ocr/_pptx_converter_with_ocr.py": {
+      "filePath": "packages/markitdown-ocr/src/markitdown_ocr/_pptx_converter_with_ocr.py",
+      "contentHash": "a4cb101371d1dc25246d0a71f0c6e85ec2291d0c3c9fa0a9dbaf267bc5f38914",
+      "functions": [],
+      "classes": [
+        {
+          "name": "PptxConverterWithOCR",
+          "methods": [
+            "__init__",
+            "accepts",
+            "convert",
+            "_is_picture",
+            "_is_table",
+            "_convert_table_to_markdown",
+            "_convert_chart_to_markdown"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 223
+        }
+      ],
+      "imports": [
+        {
+          "source": "io",
+          "specifiers": [
+            "io"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any",
+            "BinaryIO",
+            "Optional"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "BinaryIO",
+            "Any",
+            "Optional"
+          ]
+        },
+        {
+          "source": "markitdown.converters",
+          "specifiers": [
+            "HtmlConverter"
+          ]
+        },
+        {
+          "source": "markitdown",
+          "specifiers": [
+            "DocumentConverter",
+            "DocumentConverterResult",
+            "StreamInfo"
+          ]
+        },
+        {
+          "source": "markitdown._exceptions",
+          "specifiers": [
+            "MissingDependencyException",
+            "MISSING_DEPENDENCY_MESSAGE"
+          ]
+        },
+        {
+          "source": "._ocr_service",
+          "specifiers": [
+            "LLMVisionOCRService"
+          ]
+        }
+      ],
+      "exports": [
+        "PptxConverterWithOCR"
+      ],
+      "totalLines": 250,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown-ocr/src/markitdown_ocr/_xlsx_converter_with_ocr.py": {
+      "filePath": "packages/markitdown-ocr/src/markitdown_ocr/_xlsx_converter_with_ocr.py",
+      "contentHash": "52a14d55bff7242998c817c7e8494ae7032285973789f5d945f6264cfc54efaf",
+      "functions": [],
+      "classes": [
+        {
+          "name": "XlsxConverterWithOCR",
+          "methods": [
+            "__init__",
+            "accepts",
+            "convert",
+            "_convert_standard",
+            "_convert_with_ocr",
+            "_extract_and_ocr_sheet_images",
+            "_column_number_to_letter"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 199
+        }
+      ],
+      "imports": [
+        {
+          "source": "io",
+          "specifiers": [
+            "io"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any",
+            "BinaryIO",
+            "Optional"
+          ]
+        },
+        {
+          "source": "markitdown.converters",
+          "specifiers": [
+            "HtmlConverter"
+          ]
+        },
+        {
+          "source": "markitdown",
+          "specifiers": [
+            "DocumentConverter",
+            "DocumentConverterResult",
+            "StreamInfo"
+          ]
+        },
+        {
+          "source": "markitdown._exceptions",
+          "specifiers": [
+            "MissingDependencyException",
+            "MISSING_DEPENDENCY_MESSAGE"
+          ]
+        },
+        {
+          "source": "._ocr_service",
+          "specifiers": [
+            "LLMVisionOCRService"
+          ]
+        }
+      ],
+      "exports": [
+        "XlsxConverterWithOCR"
+      ],
+      "totalLines": 226,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown-ocr/tests/__init__.py": {
+      "filePath": "packages/markitdown-ocr/tests/__init__.py",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown-ocr/tests/ocr_test_data/docx_complex_layout.docx": {
+      "filePath": "packages/markitdown-ocr/tests/ocr_test_data/docx_complex_layout.docx",
+      "contentHash": "e4338b890da1603dce7e06b0678ccf659e692d2286ba53955544bcdf8587e151",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 164,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown-ocr/tests/ocr_test_data/docx_image_end.docx": {
+      "filePath": "packages/markitdown-ocr/tests/ocr_test_data/docx_image_end.docx",
+      "contentHash": "ea6133b30bd3cf975f5fd5bebae68243ac066a2b7271ff0bbbebd72bd8cbb4e5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 170,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown-ocr/tests/ocr_test_data/docx_image_middle.docx": {
+      "filePath": "packages/markitdown-ocr/tests/ocr_test_data/docx_image_middle.docx",
+      "contentHash": "ef0ea46762acc147c8e293e104990decac1cb7f96eb13f2b267e035c3a645d50",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 166,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown-ocr/tests/ocr_test_data/docx_image_start.docx": {
+      "filePath": "packages/markitdown-ocr/tests/ocr_test_data/docx_image_start.docx",
+      "contentHash": "5c6aa4caaab0b22d05ef6070f87014ba7adf411af685f1b84a147327b97df84f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 161,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown-ocr/tests/ocr_test_data/docx_multipage.docx": {
+      "filePath": "packages/markitdown-ocr/tests/ocr_test_data/docx_multipage.docx",
+      "contentHash": "f2e87536a3c7f729c06c775f660c2989be8b805ea613322c4c194d899a39e0d3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 196,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown-ocr/tests/ocr_test_data/docx_multiple_images.docx": {
+      "filePath": "packages/markitdown-ocr/tests/ocr_test_data/docx_multiple_images.docx",
+      "contentHash": "ff681a1223ccc73fd03d7ed9cddbe207f6028d560f0ad15e1be1ab6ff0bc769c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 182,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown-ocr/tests/ocr_test_data/pptx_complex_layout.pptx": {
+      "filePath": "packages/markitdown-ocr/tests/ocr_test_data/pptx_complex_layout.pptx",
+      "contentHash": "342517d502f51ed4c4ec59d8f532495dd14d836f9fecc52b37e808f2441a26ed",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 96,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown-ocr/tests/ocr_test_data/pptx_image_end.pptx": {
+      "filePath": "packages/markitdown-ocr/tests/ocr_test_data/pptx_image_end.pptx",
+      "contentHash": "1ecb496522c7cea0006d3fca5a4898a99a0fddce49010429be240f034c94bb49",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 103,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown-ocr/tests/ocr_test_data/pptx_image_middle.pptx": {
+      "filePath": "packages/markitdown-ocr/tests/ocr_test_data/pptx_image_middle.pptx",
+      "contentHash": "ce426b8af890ae03379a76ea9211f36a5fb11b8b6700da112a67c305ce1a1223",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 99,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown-ocr/tests/ocr_test_data/pptx_image_start.pptx": {
+      "filePath": "packages/markitdown-ocr/tests/ocr_test_data/pptx_image_start.pptx",
+      "contentHash": "52ddf5d82bcca4296f7da39a55842011a24026c0f02835ccaa4fb437fb8e68de",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 89,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown-ocr/tests/ocr_test_data/pptx_multiple_images.pptx": {
+      "filePath": "packages/markitdown-ocr/tests/ocr_test_data/pptx_multiple_images.pptx",
+      "contentHash": "3034e01f94a54bacd922ee2b24c1be18c63777c016614f0730128c56befd3732",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 95,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown-ocr/tests/ocr_test_data/xlsx_complex_layout.xlsx": {
+      "filePath": "packages/markitdown-ocr/tests/ocr_test_data/xlsx_complex_layout.xlsx",
+      "contentHash": "e1241c42f5852a0de060c48daa988b9a6938b9ee64ae8de608736c8fe932ff27",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 95,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown-ocr/tests/ocr_test_data/xlsx_image_end.xlsx": {
+      "filePath": "packages/markitdown-ocr/tests/ocr_test_data/xlsx_image_end.xlsx",
+      "contentHash": "20f6d7b3dc6ce6e2d395a7d9e1ba2bcbb2c03bc92d0cca9da12073e9fec7694f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 64,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown-ocr/tests/ocr_test_data/xlsx_image_middle.xlsx": {
+      "filePath": "packages/markitdown-ocr/tests/ocr_test_data/xlsx_image_middle.xlsx",
+      "contentHash": "aa14c9c846140ae13d1ad0a39d1bd544959e42aec9139b521030ee7fd84cc93b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 66,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown-ocr/tests/ocr_test_data/xlsx_image_start.xlsx": {
+      "filePath": "packages/markitdown-ocr/tests/ocr_test_data/xlsx_image_start.xlsx",
+      "contentHash": "bc188246b93dabacc20fd80d06beea3c41d2103486c32b6b85de0a0c7ad93cc5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 62,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown-ocr/tests/ocr_test_data/xlsx_multiple_images.xlsx": {
+      "filePath": "packages/markitdown-ocr/tests/ocr_test_data/xlsx_multiple_images.xlsx",
+      "contentHash": "d6d44009eb65359dd28eafdc30248c08882b4a1ba96b4168c2882d8eb004294c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 86,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown-ocr/tests/test_docx_converter.py": {
+      "filePath": "packages/markitdown-ocr/tests/test_docx_converter.py",
+      "contentHash": "55fe164fa0a7032a5040183e894cd2152f17c68a149df6a6892960fc699de9fe",
+      "functions": [
+        {
+          "name": "svc",
+          "params": [],
+          "returnType": "MockOCRService",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "_convert",
+          "params": [
+            "filename",
+            "ocr_service"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "test_docx_image_start",
+          "params": [
+            "svc"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "test_docx_image_middle",
+          "params": [
+            "svc"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "test_docx_image_end",
+          "params": [
+            "svc"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "test_docx_multiple_images",
+          "params": [
+            "svc"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "test_docx_multipage",
+          "params": [
+            "svc"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 20
+        },
+        {
+          "name": "test_docx_complex_layout",
+          "params": [
+            "svc"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "test_inject_placeholders_single_image",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "test_inject_placeholders_two_images_sequential_tokens",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "test_inject_placeholders_no_img_tag_appends_at_end",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "test_inject_placeholders_empty_map_leaves_html_unchanged",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "test_docx_no_ocr_service_no_tags",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 9
+        }
+      ],
+      "classes": [
+        {
+          "name": "MockOCRService",
+          "methods": [
+            "extract_text"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 5
+        }
+      ],
+      "imports": [
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any"
+          ]
+        },
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "markitdown_ocr._ocr_service",
+          "specifiers": [
+            "OCRResult"
+          ]
+        },
+        {
+          "source": "markitdown_ocr._docx_converter_with_ocr",
+          "specifiers": [
+            "DocxConverterWithOCR"
+          ]
+        },
+        {
+          "source": "markitdown",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        }
+      ],
+      "exports": [
+        "MockOCRService",
+        "svc",
+        "_convert",
+        "test_docx_image_start",
+        "test_docx_image_middle",
+        "test_docx_image_end",
+        "test_docx_multiple_images",
+        "test_docx_multipage",
+        "test_docx_complex_layout",
+        "test_inject_placeholders_single_image",
+        "test_inject_placeholders_two_images_sequential_tokens",
+        "test_inject_placeholders_no_img_tag_appends_at_end",
+        "test_inject_placeholders_empty_map_leaves_html_unchanged",
+        "test_docx_no_ocr_service_no_tags"
+      ],
+      "totalLines": 224,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown-ocr/tests/test_pdf_converter.py": {
+      "filePath": "packages/markitdown-ocr/tests/test_pdf_converter.py",
+      "contentHash": "1dd6698d8a185620a7b369a2ff015d0f987d2a0aea6592ff2362658a283813a5",
+      "functions": [
+        {
+          "name": "svc",
+          "params": [],
+          "returnType": "MockOCRService",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "_convert",
+          "params": [
+            "filename",
+            "ocr_service"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "test_pdf_image_start",
+          "params": [
+            "svc"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "test_pdf_image_middle",
+          "params": [
+            "svc"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "test_pdf_image_end",
+          "params": [
+            "svc"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "test_pdf_multiple_images",
+          "params": [
+            "svc"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "test_pdf_complex_layout",
+          "params": [
+            "svc"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "test_pdf_multipage",
+          "params": [
+            "svc"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "test_pdf_scanned_invoice",
+          "params": [
+            "svc"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "test_pdf_scanned_meeting_minutes",
+          "params": [
+            "svc"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "test_pdf_scanned_minimal",
+          "params": [
+            "svc"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "test_pdf_scanned_sales_report",
+          "params": [
+            "svc"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "test_pdf_scanned_report",
+          "params": [
+            "svc"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "test_pdf_scanned_fallback_format",
+          "params": [
+            "svc"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 22
+        },
+        {
+          "name": "test_pdf_no_ocr_service_no_tags",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 9
+        }
+      ],
+      "classes": [
+        {
+          "name": "MockOCRService",
+          "methods": [
+            "extract_text"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "imports": [
+        {
+          "source": "io",
+          "specifiers": [
+            "io"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any"
+          ]
+        },
+        {
+          "source": "unittest.mock",
+          "specifiers": [
+            "MagicMock",
+            "patch"
+          ]
+        },
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "markitdown_ocr._ocr_service",
+          "specifiers": [
+            "OCRResult"
+          ]
+        },
+        {
+          "source": "markitdown_ocr._pdf_converter_with_ocr",
+          "specifiers": [
+            "PdfConverterWithOCR"
+          ]
+        },
+        {
+          "source": "markitdown",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        }
+      ],
+      "exports": [
+        "MockOCRService",
+        "svc",
+        "_convert",
+        "test_pdf_image_start",
+        "test_pdf_image_middle",
+        "test_pdf_image_end",
+        "test_pdf_multiple_images",
+        "test_pdf_complex_layout",
+        "test_pdf_multipage",
+        "test_pdf_scanned_invoice",
+        "test_pdf_scanned_meeting_minutes",
+        "test_pdf_scanned_minimal",
+        "test_pdf_scanned_sales_report",
+        "test_pdf_scanned_report",
+        "test_pdf_scanned_fallback_format",
+        "test_pdf_no_ocr_service_no_tags"
+      ],
+      "totalLines": 235,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown-ocr/tests/test_pptx_converter.py": {
+      "filePath": "packages/markitdown-ocr/tests/test_pptx_converter.py",
+      "contentHash": "55b8222ae9acff0109b7208b6cd29a0fd33169759ac51963b917f11fbd200405",
+      "functions": [
+        {
+          "name": "svc",
+          "params": [],
+          "returnType": "MockOCRService",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "_convert",
+          "params": [
+            "filename",
+            "ocr_service"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "test_pptx_image_start",
+          "params": [
+            "svc"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "test_pptx_image_middle",
+          "params": [
+            "svc"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "test_pptx_image_end",
+          "params": [
+            "svc"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "test_pptx_multiple_images",
+          "params": [
+            "svc"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "test_pptx_complex_layout",
+          "params": [
+            "svc"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "test_pptx_no_ocr_service_no_tags",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 9
+        }
+      ],
+      "classes": [
+        {
+          "name": "MockOCRService",
+          "methods": [
+            "extract_text"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "imports": [
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any"
+          ]
+        },
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "markitdown_ocr._ocr_service",
+          "specifiers": [
+            "OCRResult"
+          ]
+        },
+        {
+          "source": "markitdown_ocr._pptx_converter_with_ocr",
+          "specifiers": [
+            "PptxConverterWithOCR"
+          ]
+        },
+        {
+          "source": "markitdown",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        }
+      ],
+      "exports": [
+        "MockOCRService",
+        "svc",
+        "_convert",
+        "test_pptx_image_start",
+        "test_pptx_image_middle",
+        "test_pptx_image_end",
+        "test_pptx_multiple_images",
+        "test_pptx_complex_layout",
+        "test_pptx_no_ocr_service_no_tags"
+      ],
+      "totalLines": 149,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown-ocr/tests/test_xlsx_converter.py": {
+      "filePath": "packages/markitdown-ocr/tests/test_xlsx_converter.py",
+      "contentHash": "412b98dd4784b2e2ddbd8291fd29bf324cdc15c9d99f415ba201d43125e3d5e4",
+      "functions": [
+        {
+          "name": "svc",
+          "params": [],
+          "returnType": "MockOCRService",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "_convert",
+          "params": [
+            "filename",
+            "ocr_service"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "test_xlsx_image_start",
+          "params": [
+            "svc"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "test_xlsx_image_middle",
+          "params": [
+            "svc"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 28
+        },
+        {
+          "name": "test_xlsx_image_end",
+          "params": [
+            "svc"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 32
+        },
+        {
+          "name": "test_xlsx_multiple_images",
+          "params": [
+            "svc"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 28
+        },
+        {
+          "name": "test_xlsx_complex_layout",
+          "params": [
+            "svc"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 33
+        },
+        {
+          "name": "test_xlsx_no_ocr_service_no_tags",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 9
+        }
+      ],
+      "classes": [
+        {
+          "name": "MockOCRService",
+          "methods": [
+            "extract_text"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "imports": [
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any"
+          ]
+        },
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "markitdown_ocr._ocr_service",
+          "specifiers": [
+            "OCRResult"
+          ]
+        },
+        {
+          "source": "markitdown_ocr._xlsx_converter_with_ocr",
+          "specifiers": [
+            "XlsxConverterWithOCR"
+          ]
+        },
+        {
+          "source": "markitdown",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        }
+      ],
+      "exports": [
+        "MockOCRService",
+        "svc",
+        "_convert",
+        "test_xlsx_image_start",
+        "test_xlsx_image_middle",
+        "test_xlsx_image_end",
+        "test_xlsx_multiple_images",
+        "test_xlsx_complex_layout",
+        "test_xlsx_no_ocr_service_no_tags"
+      ],
+      "totalLines": 250,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown-sample-plugin/src/markitdown_sample_plugin/__about__.py": {
+      "filePath": "packages/markitdown-sample-plugin/src/markitdown_sample_plugin/__about__.py",
+      "contentHash": "8f5eb92cc9f4c4b11baf776b2664fa67321ffde2aab8f0c4ced080ffe16ebd45",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 5,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown-sample-plugin/src/markitdown_sample_plugin/__init__.py": {
+      "filePath": "packages/markitdown-sample-plugin/src/markitdown_sample_plugin/__init__.py",
+      "contentHash": "e4b32f92c18fe1b4218edb01976116917dacec07db6df89d467aacb6a1a89da0",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "._plugin",
+          "specifiers": [
+            "__plugin_interface_version__",
+            "register_converters",
+            "RtfConverter"
+          ]
+        },
+        {
+          "source": ".__about__",
+          "specifiers": [
+            "__version__"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 14,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown-sample-plugin/src/markitdown_sample_plugin/_plugin.py": {
+      "filePath": "packages/markitdown-sample-plugin/src/markitdown_sample_plugin/_plugin.py",
+      "contentHash": "79c4da06af57c75e05e33b4cf9f23761f7c5e41337ef1568afea3203492e7360",
+      "functions": [
+        {
+          "name": "register_converters",
+          "params": [
+            "markitdown",
+            "**kwargs"
+          ],
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "classes": [
+        {
+          "name": "RtfConverter",
+          "methods": [
+            "accepts",
+            "convert"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 38
+        }
+      ],
+      "imports": [
+        {
+          "source": "locale",
+          "specifiers": [
+            "locale"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "BinaryIO",
+            "Any"
+          ]
+        },
+        {
+          "source": "striprtf.striprtf",
+          "specifiers": [
+            "rtf_to_text"
+          ]
+        },
+        {
+          "source": "markitdown",
+          "specifiers": [
+            "MarkItDown",
+            "DocumentConverter",
+            "DocumentConverterResult",
+            "StreamInfo"
+          ]
+        }
+      ],
+      "exports": [
+        "register_converters",
+        "RtfConverter"
+      ],
+      "totalLines": 72,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown-sample-plugin/src/markitdown_sample_plugin/py.typed": {
+      "filePath": "packages/markitdown-sample-plugin/src/markitdown_sample_plugin/py.typed",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown-sample-plugin/tests/__init__.py": {
+      "filePath": "packages/markitdown-sample-plugin/tests/__init__.py",
+      "contentHash": "de117af1ce60a0bb1f44cc76fb26f80b3ad4d938a187442f1cbb44de07badd16",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 4,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown-sample-plugin/tests/test_files/test.rtf": {
+      "filePath": "packages/markitdown-sample-plugin/tests/test_files/test.rtf",
+      "contentHash": "ddc45f07b1e5e18c93291afd5f4daeda55e704eb4d00843a7c8b530942e29eca",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 251,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown-sample-plugin/tests/test_sample_plugin.py": {
+      "filePath": "packages/markitdown-sample-plugin/tests/test_sample_plugin.py",
+      "contentHash": "2753a8b31cee2cc16346ce8fd6417693ef6114c3d50c026d18a5904838a51042",
+      "functions": [
+        {
+          "name": "test_converter",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "test_markitdown",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "markitdown",
+          "specifiers": [
+            "MarkItDown",
+            "StreamInfo"
+          ]
+        },
+        {
+          "source": "markitdown_sample_plugin",
+          "specifiers": [
+            "RtfConverter"
+          ]
+        }
+      ],
+      "exports": [
+        "test_converter",
+        "test_markitdown"
+      ],
+      "totalLines": 44,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/__about__.py": {
+      "filePath": "packages/markitdown/src/markitdown/__about__.py",
+      "contentHash": "73ee402c079cdd8ef069c05eeeaa068db82d560d2830f1150ee4a2e12b4a2b28",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 5,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/__init__.py": {
+      "filePath": "packages/markitdown/src/markitdown/__init__.py",
+      "contentHash": "ba28afb90c25691ee46a7868b565369b04e5073484fc1e224d7ead4d8ed9f533",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": ".__about__",
+          "specifiers": [
+            "__version__"
+          ]
+        },
+        {
+          "source": "._markitdown",
+          "specifiers": [
+            "MarkItDown",
+            "PRIORITY_SPECIFIC_FILE_FORMAT",
+            "PRIORITY_GENERIC_FILE_FORMAT"
+          ]
+        },
+        {
+          "source": "._base_converter",
+          "specifiers": [
+            "DocumentConverterResult",
+            "DocumentConverter"
+          ]
+        },
+        {
+          "source": "._stream_info",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        },
+        {
+          "source": "._exceptions",
+          "specifiers": [
+            "MarkItDownException",
+            "MissingDependencyException",
+            "FailedConversionAttempt",
+            "FileConversionException",
+            "UnsupportedFormatException"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 35,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/__main__.py": {
+      "filePath": "packages/markitdown/src/markitdown/__main__.py",
+      "contentHash": "e11d3ca86b7324e36eb3e140348d8f50ffa50b0e4f07755cc7fe2ae4c07b2bdd",
+      "functions": [
+        {
+          "name": "main",
+          "params": [],
+          "exported": true,
+          "lineCount": 245
+        },
+        {
+          "name": "_handle_output",
+          "params": [
+            "args",
+            "result"
+          ],
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "_exit_with_error",
+          "params": [
+            "message"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "argparse",
+          "specifiers": [
+            "argparse"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "codecs",
+          "specifiers": [
+            "codecs"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any",
+            "Dict"
+          ]
+        },
+        {
+          "source": "textwrap",
+          "specifiers": [
+            "dedent"
+          ]
+        },
+        {
+          "source": "importlib.metadata",
+          "specifiers": [
+            "entry_points"
+          ]
+        },
+        {
+          "source": ".__about__",
+          "specifiers": [
+            "__version__"
+          ]
+        },
+        {
+          "source": "._markitdown",
+          "specifiers": [
+            "MarkItDown",
+            "StreamInfo",
+            "DocumentConverterResult"
+          ]
+        }
+      ],
+      "exports": [
+        "main",
+        "_handle_output",
+        "_exit_with_error"
+      ],
+      "totalLines": 282,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/_base_converter.py": {
+      "filePath": "packages/markitdown/src/markitdown/_base_converter.py",
+      "contentHash": "22e88190ef1cdc1a8af6f03aff9cc06a7015d342b4a6f0dd3b91d4a9536567e7",
+      "functions": [],
+      "classes": [
+        {
+          "name": "DocumentConverterResult",
+          "methods": [
+            "__init__",
+            "text_content",
+            "text_content",
+            "__str__"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 35
+        },
+        {
+          "name": "DocumentConverter",
+          "methods": [
+            "accepts",
+            "convert"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 64
+        }
+      ],
+      "imports": [
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any",
+            "BinaryIO",
+            "Optional"
+          ]
+        },
+        {
+          "source": "._stream_info",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        }
+      ],
+      "exports": [
+        "DocumentConverterResult",
+        "DocumentConverter"
+      ],
+      "totalLines": 106,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/_exceptions.py": {
+      "filePath": "packages/markitdown/src/markitdown/_exceptions.py",
+      "contentHash": "3a3d13a136045e6f54f68960da8e528bd298b096fcd70661b7b32e5846920e7f",
+      "functions": [],
+      "classes": [
+        {
+          "name": "MarkItDownException",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "MissingDependencyException",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "UnsupportedFormatException",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "FailedConversionAttempt",
+          "methods": [
+            "__init__"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "FileConversionException",
+          "methods": [
+            "__init__"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 25
+        }
+      ],
+      "imports": [
+        {
+          "source": "typing",
+          "specifiers": [
+            "Optional",
+            "List",
+            "Any"
+          ]
+        }
+      ],
+      "exports": [
+        "MarkItDownException",
+        "MissingDependencyException",
+        "UnsupportedFormatException",
+        "FailedConversionAttempt",
+        "FileConversionException"
+      ],
+      "totalLines": 77,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/_markitdown.py": {
+      "filePath": "packages/markitdown/src/markitdown/_markitdown.py",
+      "contentHash": "5530ca62bd075688e020da00a79ea2eee9a0d399d6c3c47ae55019db95c08470",
+      "functions": [
+        {
+          "name": "_load_plugins",
+          "params": [],
+          "returnType": "Union[None, List[Any]]",
+          "exported": true,
+          "lineCount": 18
+        }
+      ],
+      "classes": [
+        {
+          "name": "ConverterRegistration",
+          "methods": [],
+          "properties": [
+            "converter",
+            "priority"
+          ],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "MarkItDown",
+          "methods": [
+            "__init__",
+            "enable_builtins",
+            "enable_plugins",
+            "convert",
+            "convert_local",
+            "convert_stream",
+            "convert_url",
+            "convert_uri",
+            "convert_response",
+            "_convert",
+            "register_page_converter",
+            "register_converter",
+            "_get_stream_info_guesses",
+            "_normalize_charset"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 713
+        }
+      ],
+      "imports": [
+        {
+          "source": "mimetypes",
+          "specifiers": [
+            "mimetypes"
+          ]
+        },
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "shutil",
+          "specifiers": [
+            "shutil"
+          ]
+        },
+        {
+          "source": "traceback",
+          "specifiers": [
+            "traceback"
+          ]
+        },
+        {
+          "source": "io",
+          "specifiers": [
+            "io"
+          ]
+        },
+        {
+          "source": "dataclasses",
+          "specifiers": [
+            "dataclass"
+          ]
+        },
+        {
+          "source": "importlib.metadata",
+          "specifiers": [
+            "entry_points"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any",
+            "List",
+            "Dict",
+            "Optional",
+            "Union",
+            "BinaryIO"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "urllib.parse",
+          "specifiers": [
+            "urlparse"
+          ]
+        },
+        {
+          "source": "warnings",
+          "specifiers": [
+            "warn"
+          ]
+        },
+        {
+          "source": "requests",
+          "specifiers": [
+            "requests"
+          ]
+        },
+        {
+          "source": "magika",
+          "specifiers": [
+            "magika"
+          ]
+        },
+        {
+          "source": "charset_normalizer",
+          "specifiers": [
+            "charset_normalizer"
+          ]
+        },
+        {
+          "source": "codecs",
+          "specifiers": [
+            "codecs"
+          ]
+        },
+        {
+          "source": "._stream_info",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        },
+        {
+          "source": "._uri_utils",
+          "specifiers": [
+            "parse_data_uri",
+            "file_uri_to_path"
+          ]
+        },
+        {
+          "source": ".converters",
+          "specifiers": [
+            "PlainTextConverter",
+            "HtmlConverter",
+            "RssConverter",
+            "WikipediaConverter",
+            "YouTubeConverter",
+            "IpynbConverter",
+            "BingSerpConverter",
+            "PdfConverter",
+            "DocxConverter",
+            "XlsxConverter",
+            "XlsConverter",
+            "PptxConverter",
+            "ImageConverter",
+            "AudioConverter",
+            "OutlookMsgConverter",
+            "ZipConverter",
+            "EpubConverter",
+            "DocumentIntelligenceConverter",
+            "ContentUnderstandingConverter",
+            "CsvConverter"
+          ]
+        },
+        {
+          "source": "._base_converter",
+          "specifiers": [
+            "DocumentConverter",
+            "DocumentConverterResult"
+          ]
+        },
+        {
+          "source": "._exceptions",
+          "specifiers": [
+            "FileConversionException",
+            "UnsupportedFormatException",
+            "FailedConversionAttempt"
+          ]
+        }
+      ],
+      "exports": [
+        "_load_plugins",
+        "ConverterRegistration",
+        "MarkItDown"
+      ],
+      "totalLines": 807,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/_stream_info.py": {
+      "filePath": "packages/markitdown/src/markitdown/_stream_info.py",
+      "contentHash": "039bce7e9d0c5e62a6ed55ac6133e7fa530d7025a2ed8372e35538b072f6dbdf",
+      "functions": [],
+      "classes": [
+        {
+          "name": "StreamInfo",
+          "methods": [
+            "copy_and_update"
+          ],
+          "properties": [
+            "mimetype",
+            "extension",
+            "charset",
+            "filename",
+            "local_path",
+            "url"
+          ],
+          "exported": true,
+          "lineCount": 27
+        }
+      ],
+      "imports": [
+        {
+          "source": "dataclasses",
+          "specifiers": [
+            "dataclass",
+            "asdict"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Optional"
+          ]
+        }
+      ],
+      "exports": [
+        "StreamInfo"
+      ],
+      "totalLines": 33,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/_uri_utils.py": {
+      "filePath": "packages/markitdown/src/markitdown/_uri_utils.py",
+      "contentHash": "9ef5e35d6bd2dad17e11893b717c410b2ee2df04c60997b555ecfff12535cce7",
+      "functions": [
+        {
+          "name": "file_uri_to_path",
+          "params": [
+            "file_uri"
+          ],
+          "returnType": "Tuple[str | None, str]",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "parse_data_uri",
+          "params": [
+            "uri"
+          ],
+          "returnType": "Tuple[str | None, Dict[str, str], bytes]",
+          "exported": true,
+          "lineCount": 34
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "base64",
+          "specifiers": [
+            "base64"
+          ]
+        },
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Tuple",
+            "Dict"
+          ]
+        },
+        {
+          "source": "urllib.request",
+          "specifiers": [
+            "url2pathname"
+          ]
+        },
+        {
+          "source": "urllib.parse",
+          "specifiers": [
+            "urlparse",
+            "unquote_to_bytes"
+          ]
+        }
+      ],
+      "exports": [
+        "file_uri_to_path",
+        "parse_data_uri"
+      ],
+      "totalLines": 53,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converter_utils/__init__.py": {
+      "filePath": "packages/markitdown/src/markitdown/converter_utils/__init__.py",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converter_utils/docx/__init__.py": {
+      "filePath": "packages/markitdown/src/markitdown/converter_utils/docx/__init__.py",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converter_utils/docx/math/__init__.py": {
+      "filePath": "packages/markitdown/src/markitdown/converter_utils/docx/math/__init__.py",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converter_utils/docx/math/latex_dict.py": {
+      "filePath": "packages/markitdown/src/markitdown/converter_utils/docx/math/latex_dict.py",
+      "contentHash": "e5b22f1dc8bacd18730c6076d348c2099d82a74cf6267a9caa6a814c9650b2e2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 274,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converter_utils/docx/math/omml.py": {
+      "filePath": "packages/markitdown/src/markitdown/converter_utils/docx/math/omml.py",
+      "contentHash": "82dc30e0c9cd672a324b6d0d1a5f44c4a823908593ee65406431f975b93d4297",
+      "functions": [
+        {
+          "name": "load",
+          "params": [
+            "stream"
+          ],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "load_string",
+          "params": [
+            "string"
+          ],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "escape_latex",
+          "params": [
+            "strs"
+          ],
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "get_val",
+          "params": [
+            "key",
+            "default",
+            "store"
+          ],
+          "exported": true,
+          "lineCount": 5
+        }
+      ],
+      "classes": [
+        {
+          "name": "Tag2Method",
+          "methods": [
+            "call_method",
+            "process_children_list",
+            "process_children_dict",
+            "process_children",
+            "process_unknow"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 50
+        },
+        {
+          "name": "Pr",
+          "methods": [
+            "__init__",
+            "__str__",
+            "__unicode__",
+            "__getattr__",
+            "do_brk",
+            "do_common"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 41
+        },
+        {
+          "name": "oMath2Latex",
+          "methods": [
+            "__init__",
+            "__str__",
+            "__unicode__",
+            "process_unknow",
+            "latex",
+            "do_acc",
+            "do_bar",
+            "do_d",
+            "do_spre",
+            "do_sub",
+            "do_sup",
+            "do_f",
+            "do_func",
+            "do_fname",
+            "do_groupchr",
+            "do_rad",
+            "do_eqarr",
+            "do_limlow",
+            "do_limupp",
+            "do_lim",
+            "do_m",
+            "do_mr",
+            "do_nary",
+            "do_r"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 231
+        }
+      ],
+      "imports": [
+        {
+          "source": "defusedxml",
+          "specifiers": [
+            "ET"
+          ]
+        },
+        {
+          "source": ".latex_dict",
+          "specifiers": [
+            "CHARS",
+            "CHR",
+            "CHR_BO",
+            "CHR_DEFAULT",
+            "POS",
+            "POS_DEFAULT",
+            "SUB",
+            "SUP",
+            "F",
+            "F_DEFAULT",
+            "T",
+            "FUNC",
+            "D",
+            "D_DEFAULT",
+            "RAD",
+            "RAD_DEFAULT",
+            "ARR",
+            "LIM_FUNC",
+            "LIM_TO",
+            "LIM_UPP",
+            "M",
+            "BRK",
+            "BLANK",
+            "BACKSLASH",
+            "ALN",
+            "FUNC_PLACE"
+          ]
+        }
+      ],
+      "exports": [
+        "load",
+        "load_string",
+        "escape_latex",
+        "get_val",
+        "Tag2Method",
+        "Pr",
+        "oMath2Latex"
+      ],
+      "totalLines": 401,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converter_utils/docx/pre_process.py": {
+      "filePath": "packages/markitdown/src/markitdown/converter_utils/docx/pre_process.py",
+      "contentHash": "eebc5a25bec6f5fecd0d253b3ef94e0423ebda7ba68c09ed6ad709c65f73f8d2",
+      "functions": [
+        {
+          "name": "_convert_omath_to_latex",
+          "params": [
+            "tag"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "_get_omath_tag_replacement",
+          "params": [
+            "tag",
+            "block"
+          ],
+          "returnType": "Tag",
+          "exported": true,
+          "lineCount": 20
+        },
+        {
+          "name": "_replace_equations",
+          "params": [
+            "tag"
+          ],
+          "exported": true,
+          "lineCount": 23
+        },
+        {
+          "name": "_pre_process_math",
+          "params": [
+            "content"
+          ],
+          "returnType": "bytes",
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "pre_process_docx",
+          "params": [
+            "input_docx"
+          ],
+          "returnType": "BinaryIO",
+          "exported": true,
+          "lineCount": 39
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "zipfile",
+          "specifiers": [
+            "zipfile"
+          ]
+        },
+        {
+          "source": "io",
+          "specifiers": [
+            "BytesIO"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "BinaryIO"
+          ]
+        },
+        {
+          "source": "xml.etree",
+          "specifiers": [
+            "ET"
+          ]
+        },
+        {
+          "source": "bs4",
+          "specifiers": [
+            "BeautifulSoup",
+            "Tag"
+          ]
+        },
+        {
+          "source": ".math.omml",
+          "specifiers": [
+            "OMML_NS",
+            "oMath2Latex"
+          ]
+        }
+      ],
+      "exports": [
+        "_convert_omath_to_latex",
+        "_get_omath_tag_replacement",
+        "_replace_equations",
+        "_pre_process_math",
+        "pre_process_docx"
+      ],
+      "totalLines": 157,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converters/__init__.py": {
+      "filePath": "packages/markitdown/src/markitdown/converters/__init__.py",
+      "contentHash": "1d7d42f6451e50709f2d741a5814602c4611d4393b9ed44962e8b2eb55b1531e",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "._plain_text_converter",
+          "specifiers": [
+            "PlainTextConverter"
+          ]
+        },
+        {
+          "source": "._html_converter",
+          "specifiers": [
+            "HtmlConverter"
+          ]
+        },
+        {
+          "source": "._rss_converter",
+          "specifiers": [
+            "RssConverter"
+          ]
+        },
+        {
+          "source": "._wikipedia_converter",
+          "specifiers": [
+            "WikipediaConverter"
+          ]
+        },
+        {
+          "source": "._youtube_converter",
+          "specifiers": [
+            "YouTubeConverter"
+          ]
+        },
+        {
+          "source": "._ipynb_converter",
+          "specifiers": [
+            "IpynbConverter"
+          ]
+        },
+        {
+          "source": "._bing_serp_converter",
+          "specifiers": [
+            "BingSerpConverter"
+          ]
+        },
+        {
+          "source": "._pdf_converter",
+          "specifiers": [
+            "PdfConverter"
+          ]
+        },
+        {
+          "source": "._docx_converter",
+          "specifiers": [
+            "DocxConverter"
+          ]
+        },
+        {
+          "source": "._xlsx_converter",
+          "specifiers": [
+            "XlsxConverter",
+            "XlsConverter"
+          ]
+        },
+        {
+          "source": "._pptx_converter",
+          "specifiers": [
+            "PptxConverter"
+          ]
+        },
+        {
+          "source": "._image_converter",
+          "specifiers": [
+            "ImageConverter"
+          ]
+        },
+        {
+          "source": "._audio_converter",
+          "specifiers": [
+            "AudioConverter"
+          ]
+        },
+        {
+          "source": "._outlook_msg_converter",
+          "specifiers": [
+            "OutlookMsgConverter"
+          ]
+        },
+        {
+          "source": "._zip_converter",
+          "specifiers": [
+            "ZipConverter"
+          ]
+        },
+        {
+          "source": "._doc_intel_converter",
+          "specifiers": [
+            "DocumentIntelligenceConverter",
+            "DocumentIntelligenceFileType"
+          ]
+        },
+        {
+          "source": "._cu_converter",
+          "specifiers": [
+            "ContentUnderstandingConverter",
+            "ContentUnderstandingFileType"
+          ]
+        },
+        {
+          "source": "._epub_converter",
+          "specifiers": [
+            "EpubConverter"
+          ]
+        },
+        {
+          "source": "._csv_converter",
+          "specifiers": [
+            "CsvConverter"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 55,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converters/_audio_converter.py": {
+      "filePath": "packages/markitdown/src/markitdown/converters/_audio_converter.py",
+      "contentHash": "02f266e6fb689bcdcb261f9314e2b15cd5f74a735accc93ff69b64ad8c99e975",
+      "functions": [],
+      "classes": [
+        {
+          "name": "AudioConverter",
+          "methods": [
+            "accepts",
+            "convert"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 79
+        }
+      ],
+      "imports": [
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any",
+            "BinaryIO"
+          ]
+        },
+        {
+          "source": "._exiftool",
+          "specifiers": [
+            "exiftool_metadata"
+          ]
+        },
+        {
+          "source": "._transcribe_audio",
+          "specifiers": [
+            "transcribe_audio"
+          ]
+        },
+        {
+          "source": ".._base_converter",
+          "specifiers": [
+            "DocumentConverter",
+            "DocumentConverterResult"
+          ]
+        },
+        {
+          "source": ".._stream_info",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        },
+        {
+          "source": ".._exceptions",
+          "specifiers": [
+            "MissingDependencyException"
+          ]
+        }
+      ],
+      "exports": [
+        "AudioConverter"
+      ],
+      "totalLines": 102,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converters/_bing_serp_converter.py": {
+      "filePath": "packages/markitdown/src/markitdown/converters/_bing_serp_converter.py",
+      "contentHash": "09c51026d231c3a38a8baf2c9a7947715329fc3359defb38b16d01e93b7784a1",
+      "functions": [],
+      "classes": [
+        {
+          "name": "BingSerpConverter",
+          "methods": [
+            "accepts",
+            "convert"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 98
+        }
+      ],
+      "imports": [
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "base64",
+          "specifiers": [
+            "base64"
+          ]
+        },
+        {
+          "source": "binascii",
+          "specifiers": [
+            "binascii"
+          ]
+        },
+        {
+          "source": "urllib.parse",
+          "specifiers": [
+            "parse_qs",
+            "urlparse"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any",
+            "BinaryIO"
+          ]
+        },
+        {
+          "source": "bs4",
+          "specifiers": [
+            "BeautifulSoup"
+          ]
+        },
+        {
+          "source": ".._base_converter",
+          "specifiers": [
+            "DocumentConverter",
+            "DocumentConverterResult"
+          ]
+        },
+        {
+          "source": ".._stream_info",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        },
+        {
+          "source": "._markdownify",
+          "specifiers": [
+            "_CustomMarkdownify"
+          ]
+        }
+      ],
+      "exports": [
+        "BingSerpConverter"
+      ],
+      "totalLines": 121,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converters/_csv_converter.py": {
+      "filePath": "packages/markitdown/src/markitdown/converters/_csv_converter.py",
+      "contentHash": "b796945fb1a449d8199d46b84627cac951f43e40472ba09df8384a6269e111df",
+      "functions": [],
+      "classes": [
+        {
+          "name": "CsvConverter",
+          "methods": [
+            "__init__",
+            "accepts",
+            "convert"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 63
+        }
+      ],
+      "imports": [
+        {
+          "source": "csv",
+          "specifiers": [
+            "csv"
+          ]
+        },
+        {
+          "source": "io",
+          "specifiers": [
+            "io"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "BinaryIO",
+            "Any"
+          ]
+        },
+        {
+          "source": "charset_normalizer",
+          "specifiers": [
+            "from_bytes"
+          ]
+        },
+        {
+          "source": ".._base_converter",
+          "specifiers": [
+            "DocumentConverter",
+            "DocumentConverterResult"
+          ]
+        },
+        {
+          "source": ".._stream_info",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        }
+      ],
+      "exports": [
+        "CsvConverter"
+      ],
+      "totalLines": 78,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converters/_cu_converter.py": {
+      "filePath": "packages/markitdown/src/markitdown/converters/_cu_converter.py",
+      "contentHash": "6eafb751885e23a44f79ce75faf9f43b2f4f821387f00f9d6313fa0f16ecd3a8",
+      "functions": [
+        {
+          "name": "_get_modality",
+          "params": [
+            "file_type"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "_detect_file_type",
+          "params": [
+            "stream_info",
+            "file_types"
+          ],
+          "returnType": "Optional[ContentUnderstandingFileType]",
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "_clean_mime_type",
+          "params": [
+            "mimetype"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "_canonical_mime_type",
+          "params": [
+            "mimetype"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "_content_type_for",
+          "params": [
+            "file_type",
+            "mimetype"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 28
+        },
+        {
+          "name": "_detect_file_type_from_mime",
+          "params": [
+            "mimetype",
+            "allowed"
+          ],
+          "returnType": "Optional[ContentUnderstandingFileType]",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "_resolve_analyzer_modality",
+          "params": [
+            "client",
+            "analyzer_id"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 31
+        },
+        {
+          "name": "_is_analyzer_compatible",
+          "params": [
+            "file_modality",
+            "analyzer_modality"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 5
+        }
+      ],
+      "classes": [
+        {
+          "name": "ContentUnderstandingFileType",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 43
+        },
+        {
+          "name": "ContentUnderstandingConverter",
+          "methods": [
+            "__init__",
+            "accepts",
+            "convert"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 130
+        }
+      ],
+      "imports": [
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "BinaryIO",
+            "Any",
+            "List",
+            "Optional",
+            "Dict"
+          ]
+        },
+        {
+          "source": "enum",
+          "specifiers": [
+            "Enum"
+          ]
+        },
+        {
+          "source": ".._base_converter",
+          "specifiers": [
+            "DocumentConverter",
+            "DocumentConverterResult"
+          ]
+        },
+        {
+          "source": ".._stream_info",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        },
+        {
+          "source": ".._exceptions",
+          "specifiers": [
+            "MissingDependencyException"
+          ]
+        }
+      ],
+      "exports": [
+        "ContentUnderstandingFileType",
+        "_get_modality",
+        "_detect_file_type",
+        "_clean_mime_type",
+        "_canonical_mime_type",
+        "_content_type_for",
+        "_detect_file_type_from_mime",
+        "_resolve_analyzer_modality",
+        "_is_analyzer_compatible",
+        "ContentUnderstandingConverter"
+      ],
+      "totalLines": 571,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converters/_doc_intel_converter.py": {
+      "filePath": "packages/markitdown/src/markitdown/converters/_doc_intel_converter.py",
+      "contentHash": "d80c5cf9efdf1b1da8f7c8f3482286cdcbfffdb795e6383a6615b93c75755bca",
+      "functions": [
+        {
+          "name": "_get_mime_type_prefixes",
+          "params": [
+            "types"
+          ],
+          "returnType": "List[str]",
+          "exported": true,
+          "lineCount": 31
+        },
+        {
+          "name": "_get_file_extensions",
+          "params": [
+            "types"
+          ],
+          "returnType": "List[str]",
+          "exported": true,
+          "lineCount": 24
+        }
+      ],
+      "classes": [
+        {
+          "name": "DocumentIntelligenceFileType",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "DocumentIntelligenceConverter",
+          "methods": [
+            "__init__",
+            "accepts",
+            "_analysis_features",
+            "convert"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 125
+        }
+      ],
+      "imports": [
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "BinaryIO",
+            "Any",
+            "List"
+          ]
+        },
+        {
+          "source": "enum",
+          "specifiers": [
+            "Enum"
+          ]
+        },
+        {
+          "source": ".._base_converter",
+          "specifiers": [
+            "DocumentConverter",
+            "DocumentConverterResult"
+          ]
+        },
+        {
+          "source": ".._stream_info",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        },
+        {
+          "source": ".._exceptions",
+          "specifiers": [
+            "MissingDependencyException"
+          ]
+        }
+      ],
+      "exports": [
+        "DocumentIntelligenceFileType",
+        "_get_mime_type_prefixes",
+        "_get_file_extensions",
+        "DocumentIntelligenceConverter"
+      ],
+      "totalLines": 255,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converters/_docx_converter.py": {
+      "filePath": "packages/markitdown/src/markitdown/converters/_docx_converter.py",
+      "contentHash": "a6d7a3c55046aa92147aa2afe14c428287e85e3aa3bafe79397de97f0667dd49",
+      "functions": [],
+      "classes": [
+        {
+          "name": "DocxConverter",
+          "methods": [
+            "__init__",
+            "accepts",
+            "convert"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 53
+        }
+      ],
+      "imports": [
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "io",
+          "specifiers": [
+            "io"
+          ]
+        },
+        {
+          "source": "warnings",
+          "specifiers": [
+            "warn"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "BinaryIO",
+            "Any"
+          ]
+        },
+        {
+          "source": "._html_converter",
+          "specifiers": [
+            "HtmlConverter"
+          ]
+        },
+        {
+          "source": "..converter_utils.docx.pre_process",
+          "specifiers": [
+            "pre_process_docx"
+          ]
+        },
+        {
+          "source": ".._base_converter",
+          "specifiers": [
+            "DocumentConverterResult"
+          ]
+        },
+        {
+          "source": ".._stream_info",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        },
+        {
+          "source": ".._exceptions",
+          "specifiers": [
+            "MissingDependencyException",
+            "MISSING_DEPENDENCY_MESSAGE"
+          ]
+        }
+      ],
+      "exports": [
+        "DocxConverter"
+      ],
+      "totalLines": 84,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converters/_epub_converter.py": {
+      "filePath": "packages/markitdown/src/markitdown/converters/_epub_converter.py",
+      "contentHash": "c79684e502e1195256a725afe5387f67602202d3e9115aeb1581cda9203b1873",
+      "functions": [],
+      "classes": [
+        {
+          "name": "EpubConverter",
+          "methods": [
+            "__init__",
+            "accepts",
+            "convert",
+            "_get_text_from_node",
+            "_get_all_texts_from_nodes"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 121
+        }
+      ],
+      "imports": [
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "zipfile",
+          "specifiers": [
+            "zipfile"
+          ]
+        },
+        {
+          "source": "defusedxml",
+          "specifiers": [
+            "minidom"
+          ]
+        },
+        {
+          "source": "xml.dom.minidom",
+          "specifiers": [
+            "Document"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "BinaryIO",
+            "Any",
+            "Dict",
+            "List"
+          ]
+        },
+        {
+          "source": "._html_converter",
+          "specifiers": [
+            "HtmlConverter"
+          ]
+        },
+        {
+          "source": ".._base_converter",
+          "specifiers": [
+            "DocumentConverterResult"
+          ]
+        },
+        {
+          "source": ".._stream_info",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        }
+      ],
+      "exports": [
+        "EpubConverter"
+      ],
+      "totalLines": 147,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converters/_exiftool.py": {
+      "filePath": "packages/markitdown/src/markitdown/converters/_exiftool.py",
+      "contentHash": "5f43a283a31e072a33872734f8b82e82174c834d2f3720e65b7036c21a6665eb",
+      "functions": [
+        {
+          "name": "_parse_version",
+          "params": [
+            "version"
+          ],
+          "returnType": "tuple",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "exiftool_metadata",
+          "params": [
+            "file_stream",
+            "exiftool_path"
+          ],
+          "returnType": "Any",
+          "exported": true,
+          "lineCount": 42
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "locale",
+          "specifiers": [
+            "locale"
+          ]
+        },
+        {
+          "source": "subprocess",
+          "specifiers": [
+            "subprocess"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any",
+            "BinaryIO",
+            "Union"
+          ]
+        }
+      ],
+      "exports": [
+        "_parse_version",
+        "exiftool_metadata"
+      ],
+      "totalLines": 53,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converters/_html_converter.py": {
+      "filePath": "packages/markitdown/src/markitdown/converters/_html_converter.py",
+      "contentHash": "07bcb80d3370528ffcb222e8b0ca0032bcbc8205a636980937eb6f9f2a6a448d",
+      "functions": [],
+      "classes": [
+        {
+          "name": "HtmlConverter",
+          "methods": [
+            "accepts",
+            "convert",
+            "convert_string"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 90
+        }
+      ],
+      "imports": [
+        {
+          "source": "io",
+          "specifiers": [
+            "io"
+          ]
+        },
+        {
+          "source": "warnings",
+          "specifiers": [
+            "warnings"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any",
+            "BinaryIO",
+            "Optional"
+          ]
+        },
+        {
+          "source": "bs4",
+          "specifiers": [
+            "BeautifulSoup"
+          ]
+        },
+        {
+          "source": ".._base_converter",
+          "specifiers": [
+            "DocumentConverter",
+            "DocumentConverterResult"
+          ]
+        },
+        {
+          "source": ".._stream_info",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        },
+        {
+          "source": "._markdownify",
+          "specifiers": [
+            "_CustomMarkdownify"
+          ]
+        }
+      ],
+      "exports": [
+        "HtmlConverter"
+      ],
+      "totalLines": 111,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converters/_image_converter.py": {
+      "filePath": "packages/markitdown/src/markitdown/converters/_image_converter.py",
+      "contentHash": "481fa76914c9c5216aa68f7095a27d11bd5961c129525bc8c307521f6476c20c",
+      "functions": [],
+      "classes": [
+        {
+          "name": "ImageConverter",
+          "methods": [
+            "accepts",
+            "convert",
+            "_get_llm_description"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 123
+        }
+      ],
+      "imports": [
+        {
+          "source": "typing",
+          "specifiers": [
+            "BinaryIO",
+            "Any",
+            "Union"
+          ]
+        },
+        {
+          "source": "base64",
+          "specifiers": [
+            "base64"
+          ]
+        },
+        {
+          "source": "mimetypes",
+          "specifiers": [
+            "mimetypes"
+          ]
+        },
+        {
+          "source": "._exiftool",
+          "specifiers": [
+            "exiftool_metadata"
+          ]
+        },
+        {
+          "source": ".._base_converter",
+          "specifiers": [
+            "DocumentConverter",
+            "DocumentConverterResult"
+          ]
+        },
+        {
+          "source": ".._stream_info",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        }
+      ],
+      "exports": [
+        "ImageConverter"
+      ],
+      "totalLines": 139,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converters/_ipynb_converter.py": {
+      "filePath": "packages/markitdown/src/markitdown/converters/_ipynb_converter.py",
+      "contentHash": "32ae36fe7f395dbc5c0a3fd3f09b62f2e7c96dba77362530c4f325a7f19ab70e",
+      "functions": [],
+      "classes": [
+        {
+          "name": "IpynbConverter",
+          "methods": [
+            "accepts",
+            "convert",
+            "_convert"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 82
+        }
+      ],
+      "imports": [
+        {
+          "source": "typing",
+          "specifiers": [
+            "BinaryIO",
+            "Any"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": ".._base_converter",
+          "specifiers": [
+            "DocumentConverter",
+            "DocumentConverterResult"
+          ]
+        },
+        {
+          "source": ".._exceptions",
+          "specifiers": [
+            "FileConversionException"
+          ]
+        },
+        {
+          "source": ".._stream_info",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        }
+      ],
+      "exports": [
+        "IpynbConverter"
+      ],
+      "totalLines": 97,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converters/_llm_caption.py": {
+      "filePath": "packages/markitdown/src/markitdown/converters/_llm_caption.py",
+      "contentHash": "1f59673a3214b0f02bb669b6c883166fd39f9b6fbcb0e3f777d1eb184e92b4bc",
+      "functions": [
+        {
+          "name": "llm_caption",
+          "params": [
+            "file_stream",
+            "stream_info",
+            "client",
+            "model",
+            "prompt"
+          ],
+          "returnType": "Union[None, str]",
+          "exported": true,
+          "lineCount": 44
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "typing",
+          "specifiers": [
+            "BinaryIO",
+            "Union"
+          ]
+        },
+        {
+          "source": "base64",
+          "specifiers": [
+            "base64"
+          ]
+        },
+        {
+          "source": "mimetypes",
+          "specifiers": [
+            "mimetypes"
+          ]
+        },
+        {
+          "source": ".._stream_info",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        }
+      ],
+      "exports": [
+        "llm_caption"
+      ],
+      "totalLines": 51,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converters/_markdownify.py": {
+      "filePath": "packages/markitdown/src/markitdown/converters/_markdownify.py",
+      "contentHash": "52a5a560169fab0ca1781e2a21443e81c430367f1f1de4077a401ac45c8defac",
+      "functions": [],
+      "classes": [
+        {
+          "name": "_CustomMarkdownify",
+          "methods": [
+            "__init__",
+            "convert_hn",
+            "convert_a",
+            "convert_img",
+            "convert_input",
+            "convert_soup"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 119
+        }
+      ],
+      "imports": [
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "markdownify",
+          "specifiers": [
+            "markdownify"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any",
+            "Optional"
+          ]
+        },
+        {
+          "source": "urllib.parse",
+          "specifiers": [
+            "quote",
+            "unquote",
+            "urlparse",
+            "urlunparse"
+          ]
+        }
+      ],
+      "exports": [
+        "_CustomMarkdownify"
+      ],
+      "totalLines": 127,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converters/_outlook_msg_converter.py": {
+      "filePath": "packages/markitdown/src/markitdown/converters/_outlook_msg_converter.py",
+      "contentHash": "9443fd8b0135ddfabbf8b3ba2c0433d27f6a2db6e5e28f0091854bdb234ff1d4",
+      "functions": [],
+      "classes": [
+        {
+          "name": "OutlookMsgConverter",
+          "methods": [
+            "accepts",
+            "convert",
+            "_get_stream_data"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 126
+        }
+      ],
+      "imports": [
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any",
+            "Union",
+            "BinaryIO"
+          ]
+        },
+        {
+          "source": ".._stream_info",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        },
+        {
+          "source": ".._base_converter",
+          "specifiers": [
+            "DocumentConverter",
+            "DocumentConverterResult"
+          ]
+        },
+        {
+          "source": ".._exceptions",
+          "specifiers": [
+            "MissingDependencyException",
+            "MISSING_DEPENDENCY_MESSAGE"
+          ]
+        }
+      ],
+      "exports": [
+        "OutlookMsgConverter"
+      ],
+      "totalLines": 150,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converters/_pdf_converter.py": {
+      "filePath": "packages/markitdown/src/markitdown/converters/_pdf_converter.py",
+      "contentHash": "8a48783a111f8c240ab87320921455e879a5f6753421a6cc472e6d2b89bf2c92",
+      "functions": [
+        {
+          "name": "_merge_partial_numbering_lines",
+          "params": [
+            "text"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 44
+        },
+        {
+          "name": "_to_markdown_table",
+          "params": [
+            "table",
+            "include_separator"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 40
+        },
+        {
+          "name": "_extract_form_content_from_words",
+          "params": [
+            "page"
+          ],
+          "returnType": "str | None",
+          "exported": true,
+          "lineCount": 276
+        },
+        {
+          "name": "_extract_tables_from_words",
+          "params": [
+            "page"
+          ],
+          "returnType": "list[list[list[str]]]",
+          "exported": true,
+          "lineCount": 95
+        }
+      ],
+      "classes": [
+        {
+          "name": "PdfConverter",
+          "methods": [
+            "accepts",
+            "convert"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 95
+        }
+      ],
+      "imports": [
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "io",
+          "specifiers": [
+            "io"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "BinaryIO",
+            "Any"
+          ]
+        },
+        {
+          "source": ".._base_converter",
+          "specifiers": [
+            "DocumentConverter",
+            "DocumentConverterResult"
+          ]
+        },
+        {
+          "source": ".._stream_info",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        },
+        {
+          "source": ".._exceptions",
+          "specifiers": [
+            "MissingDependencyException",
+            "MISSING_DEPENDENCY_MESSAGE"
+          ]
+        }
+      ],
+      "exports": [
+        "_merge_partial_numbering_lines",
+        "_to_markdown_table",
+        "_extract_form_content_from_words",
+        "_extract_tables_from_words",
+        "PdfConverter"
+      ],
+      "totalLines": 590,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converters/_plain_text_converter.py": {
+      "filePath": "packages/markitdown/src/markitdown/converters/_plain_text_converter.py",
+      "contentHash": "591077d5c51905345a3ad7f21a639d37458e9ef16eebb87cc1102f7f92eba59c",
+      "functions": [],
+      "classes": [
+        {
+          "name": "PlainTextConverter",
+          "methods": [
+            "accepts",
+            "convert"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 39
+        }
+      ],
+      "imports": [
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "BinaryIO",
+            "Any"
+          ]
+        },
+        {
+          "source": "charset_normalizer",
+          "specifiers": [
+            "from_bytes"
+          ]
+        },
+        {
+          "source": ".._base_converter",
+          "specifiers": [
+            "DocumentConverter",
+            "DocumentConverterResult"
+          ]
+        },
+        {
+          "source": ".._stream_info",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        }
+      ],
+      "exports": [
+        "PlainTextConverter"
+      ],
+      "totalLines": 72,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converters/_pptx_converter.py": {
+      "filePath": "packages/markitdown/src/markitdown/converters/_pptx_converter.py",
+      "contentHash": "1b9aac4678cb4eb3b6cef6a92ae05d10af18c094d704fdc58963a4e4720c162e",
+      "functions": [],
+      "classes": [
+        {
+          "name": "PptxConverter",
+          "methods": [
+            "__init__",
+            "accepts",
+            "convert",
+            "_is_picture",
+            "_is_table",
+            "_convert_table_to_markdown",
+            "_convert_chart_to_markdown"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 231
+        }
+      ],
+      "imports": [
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "base64",
+          "specifiers": [
+            "base64"
+          ]
+        },
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "io",
+          "specifiers": [
+            "io"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "html",
+          "specifiers": [
+            "html"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "BinaryIO",
+            "Any"
+          ]
+        },
+        {
+          "source": "operator",
+          "specifiers": [
+            "attrgetter"
+          ]
+        },
+        {
+          "source": "._html_converter",
+          "specifiers": [
+            "HtmlConverter"
+          ]
+        },
+        {
+          "source": "._llm_caption",
+          "specifiers": [
+            "llm_caption"
+          ]
+        },
+        {
+          "source": ".._base_converter",
+          "specifiers": [
+            "DocumentConverter",
+            "DocumentConverterResult"
+          ]
+        },
+        {
+          "source": ".._stream_info",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        },
+        {
+          "source": ".._exceptions",
+          "specifiers": [
+            "MissingDependencyException",
+            "MISSING_DEPENDENCY_MESSAGE"
+          ]
+        }
+      ],
+      "exports": [
+        "PptxConverter"
+      ],
+      "totalLines": 265,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converters/_rss_converter.py": {
+      "filePath": "packages/markitdown/src/markitdown/converters/_rss_converter.py",
+      "contentHash": "00bf56c318de8dd5a39de90b845ac6771a0348a7efebe39dd8c2e5736ac45c8d",
+      "functions": [],
+      "classes": [
+        {
+          "name": "RssConverter",
+          "methods": [
+            "__init__",
+            "accepts",
+            "_check_xml",
+            "_feed_type",
+            "convert",
+            "_parse_atom_type",
+            "_parse_rss_type",
+            "_parse_content",
+            "_get_data_by_tag_name"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 164
+        }
+      ],
+      "imports": [
+        {
+          "source": "defusedxml",
+          "specifiers": [
+            "minidom"
+          ]
+        },
+        {
+          "source": "xml.dom.minidom",
+          "specifiers": [
+            "Document",
+            "Element"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "BinaryIO",
+            "Any",
+            "Union"
+          ]
+        },
+        {
+          "source": "bs4",
+          "specifiers": [
+            "BeautifulSoup"
+          ]
+        },
+        {
+          "source": "._markdownify",
+          "specifiers": [
+            "_CustomMarkdownify"
+          ]
+        },
+        {
+          "source": ".._stream_info",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        },
+        {
+          "source": ".._base_converter",
+          "specifiers": [
+            "DocumentConverter",
+            "DocumentConverterResult"
+          ]
+        }
+      ],
+      "exports": [
+        "RssConverter"
+      ],
+      "totalLines": 193,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converters/_transcribe_audio.py": {
+      "filePath": "packages/markitdown/src/markitdown/converters/_transcribe_audio.py",
+      "contentHash": "e43b9f6d39f33648d52f81c3e0c71649490212d1823293765e6f3f874b698a3c",
+      "functions": [
+        {
+          "name": "transcribe_audio",
+          "params": [
+            "file_stream",
+            "audio_format"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 27
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "io",
+          "specifiers": [
+            "io"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "BinaryIO"
+          ]
+        },
+        {
+          "source": ".._exceptions",
+          "specifiers": [
+            "MissingDependencyException"
+          ]
+        }
+      ],
+      "exports": [
+        "transcribe_audio"
+      ],
+      "totalLines": 50,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converters/_wikipedia_converter.py": {
+      "filePath": "packages/markitdown/src/markitdown/converters/_wikipedia_converter.py",
+      "contentHash": "9ea1b94f6304d1aed4b677b35338f932f9e29b4d712b138062c3227746209b38",
+      "functions": [],
+      "classes": [
+        {
+          "name": "WikipediaConverter",
+          "methods": [
+            "accepts",
+            "convert"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 68
+        }
+      ],
+      "imports": [
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "bs4",
+          "specifiers": [
+            "bs4"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any",
+            "BinaryIO"
+          ]
+        },
+        {
+          "source": ".._base_converter",
+          "specifiers": [
+            "DocumentConverter",
+            "DocumentConverterResult"
+          ]
+        },
+        {
+          "source": ".._stream_info",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        },
+        {
+          "source": "._markdownify",
+          "specifiers": [
+            "_CustomMarkdownify"
+          ]
+        }
+      ],
+      "exports": [
+        "WikipediaConverter"
+      ],
+      "totalLines": 88,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converters/_xlsx_converter.py": {
+      "filePath": "packages/markitdown/src/markitdown/converters/_xlsx_converter.py",
+      "contentHash": "e8c3a4beb34b69c86a17c3ee673927421b3d6c514dcb8eb0c55123dc4af04f8c",
+      "functions": [],
+      "classes": [
+        {
+          "name": "XlsxConverter",
+          "methods": [
+            "__init__",
+            "accepts",
+            "convert"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 60
+        },
+        {
+          "name": "XlsConverter",
+          "methods": [
+            "__init__",
+            "accepts",
+            "convert"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 60
+        }
+      ],
+      "imports": [
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "BinaryIO",
+            "Any"
+          ]
+        },
+        {
+          "source": "._html_converter",
+          "specifiers": [
+            "HtmlConverter"
+          ]
+        },
+        {
+          "source": ".._base_converter",
+          "specifiers": [
+            "DocumentConverter",
+            "DocumentConverterResult"
+          ]
+        },
+        {
+          "source": ".._exceptions",
+          "specifiers": [
+            "MissingDependencyException",
+            "MISSING_DEPENDENCY_MESSAGE"
+          ]
+        },
+        {
+          "source": ".._stream_info",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        }
+      ],
+      "exports": [
+        "XlsxConverter",
+        "XlsConverter"
+      ],
+      "totalLines": 158,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converters/_youtube_converter.py": {
+      "filePath": "packages/markitdown/src/markitdown/converters/_youtube_converter.py",
+      "contentHash": "e58680df90de1dc04e3b92881ac9773b260b50a76f8f522dbc8e9c7a44cef478",
+      "functions": [],
+      "classes": [
+        {
+          "name": "YouTubeConverter",
+          "methods": [
+            "accepts",
+            "convert",
+            "_get",
+            "_findKey",
+            "_retry_operation"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 202
+        }
+      ],
+      "imports": [
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "time",
+          "specifiers": [
+            "time"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "bs4",
+          "specifiers": [
+            "bs4"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any",
+            "BinaryIO",
+            "Dict",
+            "List",
+            "Union"
+          ]
+        },
+        {
+          "source": "urllib.parse",
+          "specifiers": [
+            "parse_qs",
+            "urlparse",
+            "unquote"
+          ]
+        },
+        {
+          "source": ".._base_converter",
+          "specifiers": [
+            "DocumentConverter",
+            "DocumentConverterResult"
+          ]
+        },
+        {
+          "source": ".._stream_info",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        }
+      ],
+      "exports": [
+        "YouTubeConverter"
+      ],
+      "totalLines": 239,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/converters/_zip_converter.py": {
+      "filePath": "packages/markitdown/src/markitdown/converters/_zip_converter.py",
+      "contentHash": "63486d6505ad24addef3dd5ab280e52e6b8b1825a498961478c31c4f318bdef0",
+      "functions": [],
+      "classes": [
+        {
+          "name": "ZipConverter",
+          "methods": [
+            "__init__",
+            "accepts",
+            "convert"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 95
+        }
+      ],
+      "imports": [
+        {
+          "source": "zipfile",
+          "specifiers": [
+            "zipfile"
+          ]
+        },
+        {
+          "source": "io",
+          "specifiers": [
+            "io"
+          ]
+        },
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "BinaryIO",
+            "Any",
+            "TYPE_CHECKING"
+          ]
+        },
+        {
+          "source": ".._base_converter",
+          "specifiers": [
+            "DocumentConverter",
+            "DocumentConverterResult"
+          ]
+        },
+        {
+          "source": ".._stream_info",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        },
+        {
+          "source": ".._exceptions",
+          "specifiers": [
+            "UnsupportedFormatException",
+            "FileConversionException"
+          ]
+        }
+      ],
+      "exports": [
+        "ZipConverter"
+      ],
+      "totalLines": 117,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/src/markitdown/py.typed": {
+      "filePath": "packages/markitdown/src/markitdown/py.typed",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown/tests/__init__.py": {
+      "filePath": "packages/markitdown/tests/__init__.py",
+      "contentHash": "de117af1ce60a0bb1f44cc76fb26f80b3ad4d938a187442f1cbb44de07badd16",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 4,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/tests/_test_vectors.py": {
+      "filePath": "packages/markitdown/tests/_test_vectors.py",
+      "contentHash": "f675d6d404617e1e1689184e44da357b529068183e076c753bbc1f3b4aab9a6f",
+      "functions": [],
+      "classes": [
+        {
+          "name": "FileTestVector",
+          "methods": [],
+          "properties": [
+            "filename",
+            "mimetype",
+            "charset",
+            "url",
+            "must_include",
+            "must_not_include"
+          ],
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "imports": [
+        {
+          "source": "dataclasses",
+          "specifiers": [
+            "dataclasses"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "List"
+          ]
+        }
+      ],
+      "exports": [
+        "FileTestVector"
+      ],
+      "totalLines": 280,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/tests/test_cli_misc.py": {
+      "filePath": "packages/markitdown/tests/test_cli_misc.py",
+      "contentHash": "760ec45c27f4cde94d715f58ba099b9e86dc784daab095008c0d6f7aee2b8db6",
+      "functions": [
+        {
+          "name": "test_version",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "test_invalid_flag",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 10
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "subprocess",
+          "specifiers": [
+            "subprocess"
+          ]
+        },
+        {
+          "source": "markitdown",
+          "specifiers": [
+            "__version__"
+          ]
+        }
+      ],
+      "exports": [
+        "test_version",
+        "test_invalid_flag"
+      ],
+      "totalLines": 35,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/tests/test_cli_vectors.py": {
+      "filePath": "packages/markitdown/tests/test_cli_vectors.py",
+      "contentHash": "e74a9369c0527b9c2fc520d5b900f05e84a00127ff67a5d4c6e7482def954a44",
+      "functions": [
+        {
+          "name": "shared_tmp_dir",
+          "params": [
+            "tmp_path_factory"
+          ],
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "test_output_to_stdout",
+          "params": [
+            "shared_tmp_dir",
+            "test_vector"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 19
+        },
+        {
+          "name": "test_output_to_file",
+          "params": [
+            "shared_tmp_dir",
+            "test_vector"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 29
+        },
+        {
+          "name": "test_input_from_stdin_without_hints",
+          "params": [
+            "shared_tmp_dir",
+            "test_vector"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 27
+        },
+        {
+          "name": "test_convert_url",
+          "params": [
+            "shared_tmp_dir",
+            "test_vector"
+          ],
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "test_output_to_file_with_data_uris",
+          "params": [
+            "shared_tmp_dir",
+            "test_vector"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 30
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "time",
+          "specifiers": [
+            "time"
+          ]
+        },
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "subprocess",
+          "specifiers": [
+            "subprocess"
+          ]
+        },
+        {
+          "source": "locale",
+          "specifiers": [
+            "locale"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "List"
+          ]
+        }
+      ],
+      "exports": [
+        "shared_tmp_dir",
+        "test_output_to_stdout",
+        "test_output_to_file",
+        "test_input_from_stdin_without_hints",
+        "test_convert_url",
+        "test_output_to_file_with_data_uris"
+      ],
+      "totalLines": 218,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/tests/test_cu_converter.py": {
+      "filePath": "packages/markitdown/tests/test_cu_converter.py",
+      "contentHash": "a497dee4dafc4abf3240125d7c0de66f8773905518ca138257a2987dd64837dd",
+      "functions": [
+        {
+          "name": "_make_converter",
+          "params": [
+            "file_types",
+            "analyzer_id",
+            "analyzer_modality"
+          ],
+          "exported": true,
+          "lineCount": 15
+        }
+      ],
+      "classes": [
+        {
+          "name": "TestAcceptsExtension",
+          "methods": [
+            "test_accepts_supported_extensions",
+            "test_rejects_unsupported_extensions"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 60
+        },
+        {
+          "name": "TestAcceptsMime",
+          "methods": [
+            "test_accepts_supported_mimetypes",
+            "test_rejects_unsupported_mimetypes"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 39
+        },
+        {
+          "name": "TestAcceptsFileTypeRestriction",
+          "methods": [
+            "test_restricted_to_pdf_only",
+            "test_restricted_to_audio",
+            "test_webm_value_matches_cli_input",
+            "test_m4v_value_matches_cli_input"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 26
+        },
+        {
+          "name": "TestDetectFileType",
+          "methods": [
+            "test_detects_video_from_mime_without_extension",
+            "test_detects_audio_from_mime_without_extension",
+            "test_detects_audio_alias_from_mime_without_extension",
+            "test_detects_video_alias_from_mime_without_extension",
+            "test_canonical_mime_type",
+            "test_content_type_for",
+            "test_content_type_for_resolves_conflicts_to_file_type",
+            "test_conflicting_extension_and_mimetype_in_convert",
+            "test_file_type_restriction_applies_to_mime"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 108
+        },
+        {
+          "name": "TestSmartRouting",
+          "methods": [
+            "test_document_analyzer_routes_pdf_to_custom",
+            "test_document_analyzer_routes_mp3_to_prebuilt",
+            "test_document_analyzer_routes_mp4_to_prebuilt",
+            "test_no_analyzer_id_uses_auto_routing",
+            "test_no_analyzer_id_routes_image_to_document_search",
+            "test_document_analyzer_routes_image_to_custom",
+            "test_image_analyzer_routes_jpeg_to_custom",
+            "test_image_analyzer_routes_pdf_to_document_prebuilt",
+            "test_mime_only_input_uses_auto_routing",
+            "test_mime_alias_input_uses_canonical_content_type",
+            "test_extension_only_input_uses_file_type_content_type"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 243
+        },
+        {
+          "name": "TestResolveAnalyzerModality",
+          "methods": [
+            "test_known_document_prebuilts",
+            "test_known_audio_prebuilts",
+            "test_known_video_prebuilts",
+            "test_known_image_prebuilts",
+            "test_unknown_prebuilt_falls_back_to_get_analyzer",
+            "test_custom_analyzer_calls_get_analyzer",
+            "test_custom_analyzer_no_base_defaults_to_document",
+            "test_get_analyzer_failure_raises_value_error"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 72
+        },
+        {
+          "name": "TestGetModality",
+          "methods": [
+            "test_document_types",
+            "test_image_types",
+            "test_video_types",
+            "test_audio_types"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "TestConvertMock",
+          "methods": [
+            "_run_convert",
+            "test_pdf_returns_markdown",
+            "test_mp4_returns_markdown",
+            "test_wav_returns_markdown",
+            "test_empty_result",
+            "test_jpeg_returns_markdown"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 50
+        },
+        {
+          "name": "TestGetAnalyzerError",
+          "methods": [
+            "test_nonexistent_analyzer_raises_value_error"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 20
+        },
+        {
+          "name": "TestRegistrationPriority",
+          "methods": [
+            "test_cu_registered_before_docintel"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 35
+        },
+        {
+          "name": "TestCLIArgs",
+          "methods": [
+            "test_use_cu_without_endpoint_exits",
+            "test_use_cu_and_use_docintel_mutually_exclusive",
+            "test_cu_file_types_parsing",
+            "test_cu_file_types_invalid_value",
+            "test_cu_file_types_single_value",
+            "test_use_cu_wires_kwargs_to_markitdown"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 111
+        },
+        {
+          "name": "TestMissingDependency",
+          "methods": [
+            "test_missing_deps_message"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 18
+        }
+      ],
+      "imports": [
+        {
+          "source": "io",
+          "specifiers": [
+            "io"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "unittest.mock",
+          "specifiers": [
+            "MagicMock",
+            "patch"
+          ]
+        },
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "markitdown.converters._cu_converter",
+          "specifiers": [
+            "ContentUnderstandingConverter",
+            "ContentUnderstandingFileType",
+            "_resolve_analyzer_modality",
+            "_get_modality",
+            "_detect_file_type",
+            "_canonical_mime_type",
+            "_content_type_for",
+            "_EXTENSION_MAP"
+          ]
+        },
+        {
+          "source": "markitdown._stream_info",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        }
+      ],
+      "exports": [
+        "_make_converter",
+        "TestAcceptsExtension",
+        "TestAcceptsMime",
+        "TestAcceptsFileTypeRestriction",
+        "TestDetectFileType",
+        "TestSmartRouting",
+        "TestResolveAnalyzerModality",
+        "TestGetModality",
+        "TestConvertMock",
+        "TestGetAnalyzerError",
+        "TestRegistrationPriority",
+        "TestCLIArgs",
+        "TestMissingDependency"
+      ],
+      "totalLines": 929,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/tests/test_docintel_html.py": {
+      "filePath": "packages/markitdown/tests/test_docintel_html.py",
+      "contentHash": "92ba03e288cbbf5099138357503160b8a2e4137d91f0d1acde0276a9444e6bf7",
+      "functions": [
+        {
+          "name": "_make_converter",
+          "params": [
+            "file_types"
+          ],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "test_docintel_accepts_html_extension",
+          "params": [],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "test_docintel_accepts_html_mimetype",
+          "params": [],
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "io",
+          "specifiers": [
+            "io"
+          ]
+        },
+        {
+          "source": "markitdown.converters._doc_intel_converter",
+          "specifiers": [
+            "DocumentIntelligenceConverter",
+            "DocumentIntelligenceFileType"
+          ]
+        },
+        {
+          "source": "markitdown._stream_info",
+          "specifiers": [
+            "StreamInfo"
+          ]
+        }
+      ],
+      "exports": [
+        "_make_converter",
+        "test_docintel_accepts_html_extension",
+        "test_docintel_accepts_html_mimetype"
+      ],
+      "totalLines": 27,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/tests/test_files/equations.docx": {
+      "filePath": "packages/markitdown/tests/test_files/equations.docx",
+      "contentHash": "32b2bfae78dc2a14f8cf87a9eee123e38b659b89af03694473c82cf8a8514004",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 49,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown/tests/test_files/random.bin": {
+      "filePath": "packages/markitdown/tests/test_files/random.bin",
+      "contentHash": "a5e228be524c95348e2eb10eb661446f47cb11ebc03051f2c7cce56d7555bf9a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 5,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown/tests/test_files/rlink.docx": {
+      "filePath": "packages/markitdown/tests/test_files/rlink.docx",
+      "contentHash": "2d3c3689626429ac2aeeecda98e31df0c0ba6d29c784b1da187dde13cf4d4d12",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 67,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown/tests/test_files/test_notebook.ipynb": {
+      "filePath": "packages/markitdown/tests/test_files/test_notebook.ipynb",
+      "contentHash": "60bc053abcbdb10588c9bdc7d59436a8b09604b1e7d5e57a093ba31e555e1505",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 90,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown/tests/test_files/test_outlook_msg.msg": {
+      "filePath": "packages/markitdown/tests/test_files/test_outlook_msg.msg",
+      "contentHash": "1ac835165765cd9de3c7028669ec39c301879fb8d6ce30834f6e42a9c7c09d78",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 21,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown/tests/test_files/test_with_comment.docx": {
+      "filePath": "packages/markitdown/tests/test_files/test_with_comment.docx",
+      "contentHash": "96b15b6bfeb48bcbe3c4d6fcda7391c7054847fc9c03eabe6eeeaa1b6aade3ad",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 59,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown/tests/test_files/test.docx": {
+      "filePath": "packages/markitdown/tests/test_files/test.docx",
+      "contentHash": "241ba6c4bdaf8e9d8a00f64646e3f8cb49df6540f073c33d257a46bfcbca4597",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 463,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown/tests/test_files/test.epub": {
+      "filePath": "packages/markitdown/tests/test_files/test.epub",
+      "contentHash": "f0914a287ebd6ccec5fefa28cd6aa3f3ec3971a5d1de32107a7a428ad897fcfb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 10,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown/tests/test_files/test.m4a": {
+      "filePath": "packages/markitdown/tests/test_files/test.m4a",
+      "contentHash": "73a6bdba88a4b153449feded17bce5c21333fdef90a5ce0f7be1ae9bcc9f7361",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 434,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown/tests/test_files/test.pptx": {
+      "filePath": "packages/markitdown/tests/test_files/test.pptx",
+      "contentHash": "058b76defd127487ac1ed8f17086682725ffe76c9c105371380ee5d5f596fc72",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1943,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown/tests/test_files/test.wav": {
+      "filePath": "packages/markitdown/tests/test_files/test.wav",
+      "contentHash": "60c2bff8f897692f46406da645d1e0253d776db1988d38f2ceb0cb87fd1e90c2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2267,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown/tests/test_files/test.xls": {
+      "filePath": "packages/markitdown/tests/test_files/test.xls",
+      "contentHash": "52fc4d3b7efae14fea75a176c11baf80615a09a61ba21da8d18f0cec68491a53",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 50,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown/tests/test_files/test.xlsx": {
+      "filePath": "packages/markitdown/tests/test_files/test.xlsx",
+      "contentHash": "0910a49cafc820a11f7f47fcf4274740f1fa573d50ef1df607d9407367aff722",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 38,
+      "hasStructuralAnalysis": false
+    },
+    "packages/markitdown/tests/test_module_misc.py": {
+      "filePath": "packages/markitdown/tests/test_module_misc.py",
+      "contentHash": "561c455e9c70304a29115b364e7bad20571bde0bbe88f9e16ab8b0aca133ce85",
+      "functions": [
+        {
+          "name": "validate_strings",
+          "params": [
+            "result",
+            "expected_strings",
+            "exclude_strings"
+          ],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "test_stream_info_operations",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 70
+        },
+        {
+          "name": "test_data_uris",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 39
+        },
+        {
+          "name": "test_file_uris",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 30
+        },
+        {
+          "name": "test_docx_comments",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "test_docx_equations",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "test_input_as_strings",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "test_deeply_nested_html_fallback",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 48
+        },
+        {
+          "name": "test_doc_rlink",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 39
+        },
+        {
+          "name": "test_markitdown_remote",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "test_speech_transcription",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "test_exceptions",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "test_markitdown_exiftool",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 24
+        },
+        {
+          "name": "test_markitdown_llm_parameters",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 42
+        },
+        {
+          "name": "test_markitdown_llm",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 20
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "io",
+          "specifiers": [
+            "io"
+          ]
+        },
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "shutil",
+          "specifiers": [
+            "shutil"
+          ]
+        },
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "unittest.mock",
+          "specifiers": [
+            "MagicMock"
+          ]
+        },
+        {
+          "source": "markitdown._uri_utils",
+          "specifiers": [
+            "parse_data_uri",
+            "file_uri_to_path"
+          ]
+        },
+        {
+          "source": "markitdown",
+          "specifiers": [
+            "MarkItDown",
+            "UnsupportedFormatException",
+            "FileConversionException",
+            "StreamInfo"
+          ]
+        }
+      ],
+      "exports": [
+        "validate_strings",
+        "test_stream_info_operations",
+        "test_data_uris",
+        "test_file_uris",
+        "test_docx_comments",
+        "test_docx_equations",
+        "test_input_as_strings",
+        "test_deeply_nested_html_fallback",
+        "test_doc_rlink",
+        "test_markitdown_remote",
+        "test_speech_transcription",
+        "test_exceptions",
+        "test_markitdown_exiftool",
+        "test_markitdown_llm_parameters",
+        "test_markitdown_llm"
+      ],
+      "totalLines": 555,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/tests/test_module_vectors.py": {
+      "filePath": "packages/markitdown/tests/test_module_vectors.py",
+      "contentHash": "5beede9a668820885154cec341d94f0fc4705c81208e8acf92b61200a4cc9eec",
+      "functions": [
+        {
+          "name": "test_guess_stream_info",
+          "params": [
+            "test_vector"
+          ],
+          "exported": true,
+          "lineCount": 27
+        },
+        {
+          "name": "test_convert_local",
+          "params": [
+            "test_vector"
+          ],
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "test_convert_stream_with_hints",
+          "params": [
+            "test_vector"
+          ],
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "test_convert_stream_without_hints",
+          "params": [
+            "test_vector"
+          ],
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "test_convert_http_uri",
+          "params": [
+            "test_vector"
+          ],
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "test_convert_file_uri",
+          "params": [
+            "test_vector"
+          ],
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "test_convert_data_uri",
+          "params": [
+            "test_vector"
+          ],
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "test_convert_keep_data_uris",
+          "params": [
+            "test_vector"
+          ],
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "test_convert_stream_keep_data_uris",
+          "params": [
+            "test_vector"
+          ],
+          "exported": true,
+          "lineCount": 19
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "time",
+          "specifiers": [
+            "time"
+          ]
+        },
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "base64",
+          "specifiers": [
+            "base64"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "markitdown",
+          "specifiers": [
+            "MarkItDown",
+            "StreamInfo"
+          ]
+        }
+      ],
+      "exports": [
+        "test_guess_stream_info",
+        "test_convert_local",
+        "test_convert_stream_with_hints",
+        "test_convert_stream_without_hints",
+        "test_convert_http_uri",
+        "test_convert_file_uri",
+        "test_convert_data_uri",
+        "test_convert_keep_data_uris",
+        "test_convert_stream_keep_data_uris"
+      ],
+      "totalLines": 235,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/tests/test_pdf_masterformat.py": {
+      "filePath": "packages/markitdown/tests/test_pdf_masterformat.py",
+      "contentHash": "9aa69dd2213b03c84c834921343c927d825255a6e1c81cc0a83cb38678062a22",
+      "functions": [],
+      "classes": [
+        {
+          "name": "TestMasterFormatPartialNumbering",
+          "methods": [
+            "test_partial_numbering_pattern_regex",
+            "test_masterformat_partial_numbering_not_split",
+            "test_masterformat_content_preserved",
+            "test_merge_partial_numbering_with_empty_lines_between",
+            "test_multiple_partial_numberings_all_merged"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 158
+        }
+      ],
+      "imports": [
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "markitdown",
+          "specifiers": [
+            "MarkItDown"
+          ]
+        },
+        {
+          "source": "markitdown.converters._pdf_converter",
+          "specifiers": [
+            "PARTIAL_NUMBERING_PATTERN"
+          ]
+        }
+      ],
+      "exports": [
+        "TestMasterFormatPartialNumbering"
+      ],
+      "totalLines": 172,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/tests/test_pdf_memory.py": {
+      "filePath": "packages/markitdown/tests/test_pdf_memory.py",
+      "contentHash": "4f8dcad08732f65a94e0826213ffdc53e5502604b0a659ae7a0e909019230a5c",
+      "functions": [
+        {
+          "name": "_has_fpdf2",
+          "params": [],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "_make_form_page",
+          "params": [],
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "_make_plain_page",
+          "params": [],
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "_mock_pdfplumber_open",
+          "params": [
+            "pages"
+          ],
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "_generate_table_pdf",
+          "params": [
+            "num_pages"
+          ],
+          "returnType": "bytes",
+          "exported": true,
+          "lineCount": 23
+        }
+      ],
+      "classes": [
+        {
+          "name": "TestPdfMemoryOptimization",
+          "methods": [
+            "test_page_close_called_on_every_page",
+            "test_plain_text_pdf_falls_back_to_pdfminer",
+            "test_plain_text_pdf_still_closes_all_pages",
+            "test_mixed_pdf_uses_form_extraction_per_page",
+            "test_only_one_pdfplumber_open_call",
+            "test_real_pdf_page_cleanup"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 186
+        },
+        {
+          "name": "TestPdfMemoryBenchmark",
+          "methods": [
+            "test_memory_does_not_grow_linearly",
+            "test_memory_constant_across_page_counts"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 65
+        }
+      ],
+      "imports": [
+        {
+          "source": "gc",
+          "specifiers": [
+            "gc"
+          ]
+        },
+        {
+          "source": "io",
+          "specifiers": [
+            "io"
+          ]
+        },
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "tracemalloc",
+          "specifiers": [
+            "tracemalloc"
+          ]
+        },
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "unittest.mock",
+          "specifiers": [
+            "patch",
+            "MagicMock"
+          ]
+        },
+        {
+          "source": "markitdown",
+          "specifiers": [
+            "MarkItDown"
+          ]
+        }
+      ],
+      "exports": [
+        "_has_fpdf2",
+        "_make_form_page",
+        "_make_plain_page",
+        "_mock_pdfplumber_open",
+        "TestPdfMemoryOptimization",
+        "_generate_table_pdf",
+        "TestPdfMemoryBenchmark"
+      ],
+      "totalLines": 365,
+      "hasStructuralAnalysis": true
+    },
+    "packages/markitdown/tests/test_pdf_tables.py": {
+      "filePath": "packages/markitdown/tests/test_pdf_tables.py",
+      "contentHash": "7e4ac7074d0ac6faa1be629b5e4866a53f4ef03be33239de567338dd8dcffb53",
+      "functions": [
+        {
+          "name": "validate_strings",
+          "params": [
+            "result",
+            "expected_strings",
+            "exclude_strings"
+          ],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "validate_markdown_table",
+          "params": [
+            "result",
+            "expected_headers",
+            "expected_data_samples"
+          ],
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "extract_markdown_tables",
+          "params": [
+            "text_content"
+          ],
+          "exported": true,
+          "lineCount": 32
+        },
+        {
+          "name": "validate_table_structure",
+          "params": [
+            "table"
+          ],
+          "exported": true,
+          "lineCount": 21
+        }
+      ],
+      "classes": [
+        {
+          "name": "TestPdfTableExtraction",
+          "methods": [
+            "markitdown",
+            "test_borderless_table_extraction",
+            "test_borderless_table_no_duplication",
+            "test_borderless_table_correct_position",
+            "test_receipt_pdf_extraction",
+            "test_multipage_invoice_extraction",
+            "test_academic_pdf_extraction",
+            "test_scanned_pdf_handling",
+            "test_movie_theater_booking_pdf_extraction"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 623
+        },
+        {
+          "name": "TestPdfFullOutputComparison",
+          "methods": [
+            "markitdown",
+            "test_movie_theater_full_output",
+            "test_sparse_borderless_table_full_output",
+            "test_repair_multipage_full_output",
+            "test_receipt_full_output",
+            "test_academic_paper_full_output",
+            "test_medical_scan_full_output"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 257
+        },
+        {
+          "name": "TestPdfTableMarkdownFormat",
+          "methods": [
+            "markitdown",
+            "test_markdown_table_has_pipe_format",
+            "test_markdown_table_columns_have_pipes"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 57
+        },
+        {
+          "name": "TestPdfTableStructureConsistency",
+          "methods": [
+            "markitdown",
+            "test_borderless_table_structure",
+            "test_multipage_invoice_table_structure",
+            "test_receipt_has_no_tables",
+            "test_scanned_pdf_no_tables",
+            "test_all_pdfs_table_rows_consistent",
+            "test_borderless_table_data_integrity"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 159
+        }
+      ],
+      "imports": [
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "markitdown",
+          "specifiers": [
+            "MarkItDown"
+          ]
+        }
+      ],
+      "exports": [
+        "validate_strings",
+        "validate_markdown_table",
+        "extract_markdown_tables",
+        "validate_table_structure",
+        "TestPdfTableExtraction",
+        "TestPdfFullOutputComparison",
+        "TestPdfTableMarkdownFormat",
+        "TestPdfTableStructureConsistency"
+      ],
+      "totalLines": 1199,
+      "hasStructuralAnalysis": true
+    }
+  }
+}

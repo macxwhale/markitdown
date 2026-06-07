@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MarkItDown — hand it over, we'll make it pretty</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --panel: #181b25;
+    --panel-edge: #2a2f3d;
+    --ink: #eef0f6;
+    --muted: #9aa1b4;
+    --accent: #ff5fa2;
+    --accent-2: #6ee7ff;
+    --good: #5ee6a0;
+    --bad: #ff6b6b;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background:
+      radial-gradient(circle at 15% -10%, rgba(255, 95, 162, 0.18), transparent 40%),
+      radial-gradient(circle at 110% 10%, rgba(110, 231, 255, 0.12), transparent 45%),
+      var(--bg);
+    color: var(--ink);
+    min-height: 100vh;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 48px 20px 80px; }
+  header { margin-bottom: 36px; }
+  h1 {
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    margin: 0 0 6px;
+    letter-spacing: -0.02em;
+  }
+  h1 span {
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .tagline { color: var(--muted); font-size: 1.05rem; margin: 0; }
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--panel-edge);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+  .tabs { display: flex; gap: 8px; margin-bottom: 18px; }
+  .tab {
+    background: transparent;
+    border: 1px solid var(--panel-edge);
+    color: var(--muted);
+    padding: 8px 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.15s ease;
+  }
+  .tab.active {
+    color: var(--bg);
+    background: var(--accent-2);
+    border-color: var(--accent-2);
+    font-weight: 600;
+  }
+  .pane { display: none; }
+  .pane.active { display: block; }
+  .dropzone {
+    border: 2px dashed var(--panel-edge);
+    border-radius: 12px;
+    padding: 36px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+  .dropzone:hover, .dropzone.drag { border-color: var(--accent); background: rgba(255, 95, 162, 0.06); }
+  .dropzone p { margin: 4px 0; }
+  .dropzone .big { font-size: 1.05rem; font-weight: 600; }
+  .dropzone .small { color: var(--muted); font-size: 0.85rem; }
+  .filename { margin-top: 12px; color: var(--accent-2); font-family: var(--mono); font-size: 0.9rem; word-break: break-all; }
+  input[type="text"], input[type="password"], input[type="url"] {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--panel-edge);
+    color: var(--ink);
+    padding: 12px 14px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.15s ease;
+  }
+  input:focus { border-color: var(--accent-2); }
+  label { display: block; font-size: 0.85rem; color: var(--muted); margin-bottom: 6px; }
+  .row { margin-bottom: 16px; }
+  .key-row summary { cursor: pointer; color: var(--muted); font-size: 0.85rem; margin-bottom: 10px; }
+  button.go {
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    color: #11131c;
+    border: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 13px 26px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.15s ease;
+  }
+  button.go:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(255, 95, 162, 0.25); }
+  button.go:disabled { opacity: 0.5; cursor: wait; transform: none; box-shadow: none; }
+  .status { margin-top: 14px; font-size: 0.9rem; min-height: 1.4em; }
+  .status.ok { color: var(--good); }
+  .status.err { color: var(--bad); }
+  .status.busy { color: var(--accent-2); }
+  .output-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+  .output-head h2 { margin: 0; font-size: 1.1rem; }
+  .output-actions { display: flex; gap: 8px; }
+  .ghost-btn {
+    background: transparent;
+    border: 1px solid var(--panel-edge);
+    color: var(--ink);
+    padding: 7px 14px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    cursor: pointer;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+  .ghost-btn:hover { border-color: var(--accent-2); color: var(--accent-2); }
+  pre.markdown {
+    background: var(--bg);
+    border: 1px solid var(--panel-edge);
+    border-radius: 12px;
+    padding: 18px;
+    max-height: 520px;
+    overflow: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+  footer { color: var(--muted); font-size: 0.8rem; text-align: center; margin-top: 36px; }
+  footer a { color: var(--accent-2); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Mark<span>It</span>Down</h1>
+      <p class="tagline">Hand over your sad PDFs, crusty Word docs, and questionable web pages. We'll hand back Markdown that doesn't make us cringe.</p>
+    </header>
+
+    <section class="panel">
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-pane="file-pane" type="button">A file, obviously</button>
+        <button class="tab" data-pane="url-pane" type="button">Just a URL</button>
+      </div>
+
+      <div id="file-pane" class="pane active">
+        <div class="row">
+          <div id="dropzone" class="dropzone">
+            <p class="big">Drop a file here, or click to dig through your folders</p>
+            <p class="small">PDF, Word, Excel, PowerPoint, images, audio, HTML, EPUB — if it exists, we've probably got opinions about it.</p>
+            <p class="filename" id="filename"></p>
+          </div>
+          <input type="file" id="file-input" class="hidden" />
+        </div>
+      </div>
+
+      <div id="url-pane" class="pane">
+        <div class="row">
+          <label for="url-input">A link to a page or document</label>
+          <input type="url" id="url-input" placeholder="https://example.com/that-thing-you-need-as-markdown" />
+        </div>
+      </div>
+
+      <details class="key-row">
+        <summary>Server locked down? Flash your API key here. (If not, relax — we won't ask twice.)</summary>
+        <div class="row" style="margin-top: 10px;">
+          <label for="api-key">X-API-Key</label>
+          <input type="password" id="api-key" placeholder="only needed if the server demands one" />
+        </div>
+      </details>
+
+      <button class="go" id="go-btn" type="button">Make it Markdown</button>
+      <div class="status" id="status"></div>
+    </section>
+
+    <section class="panel hidden" id="output-panel">
+      <div class="output-head">
+        <h2 id="output-title">Ta-da. Your beautiful Markdown:</h2>
+        <div class="output-actions">
+          <button class="ghost-btn" id="copy-btn" type="button">Copy it</button>
+          <button class="ghost-btn" id="download-btn" type="button">Take it home</button>
+        </div>
+      </div>
+      <pre class="markdown" id="markdown-output"></pre>
+    </section>
+
+    <footer>
+      Powered by <a href="https://github.com/microsoft/markitdown" target="_blank" rel="noopener">MarkItDown</a>.
+      Curious how the sausage gets made? Poke around <a href="/docs">/docs</a>.
+    </footer>
+  </div>
+
+<script>
+(function () {
+  const tabs = document.querySelectorAll(".tab");
+  const panes = document.querySelectorAll(".pane");
+  const dropzone = document.getElementById("dropzone");
+  const fileInput = document.getElementById("file-input");
+  const filenameEl = document.getElementById("filename");
+  const urlInput = document.getElementById("url-input");
+  const apiKeyInput = document.getElementById("api-key");
+  const goBtn = document.getElementById("go-btn");
+  const statusEl = document.getElementById("status");
+  const outputPanel = document.getElementById("output-panel");
+  const outputTitle = document.getElementById("output-title");
+  const markdownOutput = document.getElementById("markdown-output");
+  const copyBtn = document.getElementById("copy-btn");
+  const downloadBtn = document.getElementById("download-btn");
+
+  let activeTab = "file-pane";
+  let selectedFile = null;
+  let lastMarkdown = "";
+  let lastSourceName = "converted";
+
+  const STORAGE_KEY = "markitdown_ui_api_key";
+  const savedKey = localStorage.getItem(STORAGE_KEY);
+  if (savedKey) apiKeyInput.value = savedKey;
+  apiKeyInput.addEventListener("input", () => {
+    if (apiKeyInput.value) localStorage.setItem(STORAGE_KEY, apiKeyInput.value);
+    else localStorage.removeItem(STORAGE_KEY);
+  });
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      activeTab = tab.dataset.pane;
+      tabs.forEach((t) => t.classList.toggle("active", t === tab));
+      panes.forEach((p) => p.classList.toggle("active", p.id === activeTab));
+      setStatus("");
+    });
+  });
+
+  dropzone.addEventListener("click", () => fileInput.click());
+  dropzone.addEventListener("dragover", (e) => { e.preventDefault(); dropzone.classList.add("drag"); });
+  dropzone.addEventListener("dragleave", () => dropzone.classList.remove("drag"));
+  dropzone.addEventListener("drop", (e) => {
+    e.preventDefault();
+    dropzone.classList.remove("drag");
+    if (e.dataTransfer.files && e.dataTransfer.files.length) {
+      pickFile(e.dataTransfer.files[0]);
+    }
+  });
+  fileInput.addEventListener("change", () => {
+    if (fileInput.files && fileInput.files.length) pickFile(fileInput.files[0]);
+  });
+
+  function pickFile(file) {
+    selectedFile = file;
+    filenameEl.textContent = "Locked and loaded: " + file.name;
+  }
+
+  function setStatus(message, kind) {
+    statusEl.textContent = message || "";
+    statusEl.className = "status" + (kind ? " " + kind : "");
+  }
+
+  function setBusy(isBusy) {
+    goBtn.disabled = isBusy;
+    goBtn.textContent = isBusy ? "Working on it…" : "Make it Markdown";
+  }
+
+  async function readErrorDetail(response) {
+    try {
+      const body = await response.json();
+      if (body && body.detail) return typeof body.detail === "string" ? body.detail : JSON.stringify(body.detail);
+    } catch (_) { /* not JSON, fall through */ }
+    return response.statusText || ("HTTP " + response.status);
+  }
+
+  function sassyForStatus(status) {
+    switch (status) {
+      case 401: return "Locked out. That API key is either missing or made up.";
+      case 413: return "That file is a unit. It's too big for us to handle right now.";
+      case 415: return "We genuinely don't know what that file is. Bold choice, but we can't convert it.";
+      case 422: return "We recognized it, we tried, and it still fell apart. Sorry.";
+      default: return "Well, that didn't go as planned.";
+    }
+  }
+
+  async function convert() {
+    const headers = {};
+    const key = apiKeyInput.value.trim();
+    if (key) headers["X-API-Key"] = key;
+
+    let response;
+    if (activeTab === "file-pane") {
+      if (!selectedFile) {
+        setStatus("Pick a file first. We can't read your mind. Yet.", "err");
+        return;
+      }
+      const form = new FormData();
+      form.append("file", selectedFile);
+      lastSourceName = selectedFile.name.replace(/\.[^.]+$/, "") || "converted";
+      setBusy(true);
+      setStatus("Chewing through your file. This is the fun part.", "busy");
+      response = await fetch("/convert/file", { method: "POST", headers, body: form });
+    } else {
+      const url = urlInput.value.trim();
+      if (!url) {
+        setStatus("A URL would help. Any URL. We're not picky.", "err");
+        return;
+      }
+      lastSourceName = "converted";
+      setBusy(true);
+      setStatus("Fetching that link and turning it into something readable…", "busy");
+      response = await fetch("/convert/url", {
+        method: "POST",
+        headers: Object.assign({ "Content-Type": "application/json" }, headers),
+        body: JSON.stringify({ url: url }),
+      });
+    }
+
+    if (!response.ok) {
+      const detail = await readErrorDetail(response);
+      setStatus(sassyForStatus(response.status) + " (" + detail + ")", "err");
+      setBusy(false);
+      return;
+    }
+
+    const data = await response.json();
+    lastMarkdown = data.markdown || "";
+    if (data.title) lastSourceName = data.title;
+    outputTitle.textContent = data.title
+      ? "Ta-da: “" + data.title + "”, now in Markdown:"
+      : "Ta-da. Your beautiful Markdown:";
+    markdownOutput.textContent = lastMarkdown;
+    outputPanel.classList.remove("hidden");
+    outputPanel.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    setStatus("Done. You're welcome.", "ok");
+    setBusy(false);
+  }
+
+  goBtn.addEventListener("click", () => {
+    convert().catch((err) => {
+      setStatus("The request itself blew up: " + (err && err.message ? err.message : err), "err");
+      setBusy(false);
+    });
+  });
+
+  copyBtn.addEventListener("click", async () => {
+    if (!lastMarkdown) return;
+    try {
+      await navigator.clipboard.writeText(lastMarkdown);
+      const original = copyBtn.textContent;
+      copyBtn.textContent = "Copied. Look at you go.";
+      setTimeout(() => { copyBtn.textContent = original; }, 1600);
+    } catch (_) {
+      setStatus("Clipboard said no. Select the text and copy it the old-fashioned way.", "err");
+    }
+  });
+
+  downloadBtn.addEventListener("click", () => {
+    if (!lastMarkdown) return;
+    const blob = new Blob([lastMarkdown], { type: "text/markdown;charset=utf-8" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = (lastSourceName || "converted").replace(/[\\/:*?"<>|]+/g, "_") + ".md";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(link.href);
+  });
+})();
+</script>
+</body>
+</html>
